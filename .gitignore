@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Node / frontend build
+node_modules/
+dist/
+.vite/
+
+# Playwright
+playwright-report/
+test-results/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Env / secrets
+.env
+.env.local
+
+# Claude Code local-only files (not shared team config)
+.claude/settings.local.json
+.claude/scheduled_tasks.lock

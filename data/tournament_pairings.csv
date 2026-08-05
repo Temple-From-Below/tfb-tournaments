@@ -1,0 +1,138 @@
+tournament_name,round,table,player_1,points_player_1,player_2,points_player_2,match_results,player_1_wins,player_2_wins,player_winner,player_name_winner,is_draw
+Mensual Abril 2025,1,1,Teba,0,Paco,0,1 - 2,1,2,2,Paco,FALSE
+Mensual Abril 2025,1,2,Alan,0,Alfieri,0,2 - 0,2,0,1,Alan,FALSE
+Mensual Abril 2025,1,3,Jorge,0,Hugo,0,0 - 1,0,1,2,Hugo,FALSE
+Mensual Abril 2025,1,4,Sergio,0,Dani B,0,0 - 2,0,2,2,Dani B,FALSE
+Mensual Abril 2025,1,5,Daniel J,0,Nilo,0,2 - 1,2,1,1,Daniel J,FALSE
+Mensual Abril 2025,1,6,Miquel,0,Ruben I,0,0 - 2,0,2,2,Ruben I,FALSE
+Mensual Abril 2025,1,7,Hector,0,Adrian,0,2 - 0,2,0,1,Hector,FALSE
+Mensual Abril 2025,1,8,Aitor,0,David F,0,2 - 0,2,0,1,Aitor,FALSE
+Mensual Abril 2025,2,1,Aitor,3,Daniel J,3,0 - 2,0,2,2,Daniel J,FALSE
+Mensual Abril 2025,2,2,Hector,3,Dani B,3,1 - 2,1,2,2,Dani B,FALSE
+Mensual Abril 2025,2,3,Paco,3,Hugo,3,2 - 0,2,0,1,Paco,FALSE
+Mensual Abril 2025,2,4,Ruben I,3,Alan,3,2 - 0,2,0,1,Ruben I,FALSE
+Mensual Abril 2025,2,5,Sergio,0,Nilo,0,1 - 2,1,2,2,Nilo,FALSE
+Mensual Abril 2025,2,6,Miquel,0,Jorge,0,0 - 1,0,1,2,Jorge,FALSE
+Mensual Abril 2025,2,7,David F,0,Teba,0,1 - 0,1,0,1,David F,FALSE
+Mensual Abril 2025,2,8,Alfieri,0,Adrian,0,0 - 2,0,2,2,Adrian,FALSE
+Mensual Abril 2025,3,1,Daniel J,6,Paco,6,0 - 2,0,2,2,Paco,FALSE
+Mensual Abril 2025,3,2,Dani B,6,Ruben I,6,2 - 0,2,0,1,Dani B,FALSE
+Mensual Abril 2025,3,3,Nilo,3,Hugo,3,2 - 1,2,1,1,Nilo,FALSE
+Mensual Abril 2025,3,4,David F,3,Alan,3,0 - 1,0,1,2,Alan,FALSE
+Mensual Abril 2025,3,5,Aitor,3,Hector,3,2 - 0,2,0,1,Aitor,FALSE
+Mensual Abril 2025,3,6,Jorge,3,Adrian,3,1 - 0,1,0,1,Jorge,FALSE
+Mensual Abril 2025,3,7,Miquel,0,Sergio,0,0 - 2,0,2,2,Sergio,FALSE
+Mensual Abril 2025,3,8,Alfieri,0,Teba,0,0 - 2,0,2,2,Teba,FALSE
+Mensual Abril 2025,4,1,Dani B,9,Paco,9,1 - 1,1,1,,,TRUE
+Mensual Abril 2025,4,2,Daniel J,6,Ruben I,6,2 - 0,2,0,1,Daniel J,FALSE
+Mensual Abril 2025,4,3,Aitor,6,Alan,6,2 - 0,2,0,1,Aitor,FALSE
+Mensual Abril 2025,4,4,Nilo,6,Jorge,6,2 - 0,2,0,1,Nilo,FALSE
+Mensual Abril 2025,4,5,Hugo,3,Hector,3,2 - 1,2,1,1,Hugo,FALSE
+Mensual Abril 2025,4,6,Sergio,3,Teba,3,2 - 0,2,0,1,Sergio,FALSE
+Mensual Abril 2025,4,7,David F,3,Adrian,3,2 - 0,2,0,1,David F,FALSE
+Mensual Abril 2025,4,8,Miquel,0,Alfieri,0,2 - 1,2,1,1,Miquel,FALSE
+Mensual Mayo 2025,1,1,Artero,0,Ruiz,0,0 - 2,0,2,2,Ruiz,FALSE
+Mensual Mayo 2025,1,2,Adrian,0,Alan,0,2 - 1,2,1,1,Adrian,FALSE
+Mensual Mayo 2025,1,3,Nieto,0,Chema,0,1 - 2,1,2,2,Chema,FALSE
+Mensual Mayo 2025,1,4,Sergio,0,Aitor,0,2 - 1,2,1,1,Sergio,FALSE
+Mensual Mayo 2025,1,5,Figols,0,Dani Bagan,0,1 - 1,1,1,,,TRUE
+Mensual Mayo 2025,1,6,Ruben,0,Teba,0,2 - 0,2,0,1,Ruben,FALSE
+Mensual Mayo 2025,1,7,Jaime,0,Hugo,0,0 - 2,0,2,2,Hugo,FALSE
+Mensual Mayo 2025,1,8,Paco,0,BYE,0,2 - 0,2,0,1,Paco,FALSE
+Mensual Mayo 2025,2,1,Paco,3,Adrian,3,2 - 0,2,0,1,Paco,FALSE
+Mensual Mayo 2025,2,2,Ruiz,3,Sergio,3,1 - 2,1,2,2,Sergio,FALSE
+Mensual Mayo 2025,2,3,Ruben,3,Chema,3,2 - 1,2,1,1,Ruben,FALSE
+Mensual Mayo 2025,2,4,Hugo,3,Figols,1,2 - 1,2,1,1,Hugo,FALSE
+Mensual Mayo 2025,2,5,Dani Bagan,1,Teba,0,2 - 0,2,0,1,Dani Bagan,FALSE
+Mensual Mayo 2025,2,6,Nieto,0,Alan,0,1 - 2,1,2,2,Alan,FALSE
+Mensual Mayo 2025,2,7,Aitor,0,Artero,0,2 - 0,2,0,1,Aitor,FALSE
+Mensual Mayo 2025,2,8,Jaime,0,BYE,0,2 - 0,2,0,1,Jaime,FALSE
+Mensual Mayo 2025,3,1,Sergio,6,Hugo,6,2 - 1,2,1,1,Sergio,FALSE
+Mensual Mayo 2025,3,2,Paco,6,Ruben,6,2 - 0,2,0,1,Paco,FALSE
+Mensual Mayo 2025,3,3,Dani Bagan,4,Aitor,3,2 - 1,2,1,1,Dani Bagan,FALSE
+Mensual Mayo 2025,3,4,Adrian,3,Ruiz,3,1 - 2,1,2,2,Ruiz,FALSE
+Mensual Mayo 2025,3,5,Jaime,3,Chema,3,2 - 1,2,1,1,Jaime,FALSE
+Mensual Mayo 2025,3,6,Alan,3,Figols,1,1 - 2,1,2,2,Figols,FALSE
+Mensual Mayo 2025,3,7,Teba,0,Nieto,0,2 - 0,2,0,1,Teba,FALSE
+Mensual Mayo 2025,3,8,Artero,0,BYE,0,2 - 0,2,0,1,Artero,FALSE
+Mensual Mayo 2025,4,1,Sergio,9,Paco,9,2 - 1,2,1,1,Sergio,FALSE
+Mensual Mayo 2025,4,2,Dani Bagan,7,Hugo,6,2 - 0,2,0,1,Dani Bagan,FALSE
+Mensual Mayo 2025,4,3,Ruiz,6,Ruben,6,0 - 2,0,2,2,Ruben,FALSE
+Mensual Mayo 2025,4,4,Jaime,6,Figols,4,0 - 2,0,2,2,Figols,FALSE
+Mensual Mayo 2025,4,5,Aitor,3,Adrian,3,2 - 1,2,1,1,Aitor,FALSE
+Mensual Mayo 2025,4,6,Teba,3,Chema,3,0 - 2,0,2,2,Chema,FALSE
+Mensual Mayo 2025,4,7,Artero,3,Alan,3,0 - 2,0,2,2,Alan,FALSE
+Mensual Mayo 2025,4,8,Nieto,0,BYE,0,2 - 0,2,0,1,Nieto,FALSE
+Mensual Junio 2025,1,1,Teba,0,Artero,0,0 - 2,0,2,2,Artero,FALSE
+Mensual Junio 2025,1,2,Aitor,0,Figols no,0,2 - 0,2,0,1,Aitor,FALSE
+Mensual Junio 2025,1,3,Giacomo,0,Sergio,0,2 - 1,2,1,1,Giacomo,FALSE
+Mensual Junio 2025,1,4,Pat,0,alejandro reguera,0,2 - 0,2,0,1,Pat,FALSE
+Mensual Junio 2025,1,5,Borja,0,Hugo,0,1 - 2,1,2,2,Hugo,FALSE
+Mensual Junio 2025,1,6,Ferran,0,Xelu,0,2 - 1,2,1,1,Ferran,FALSE
+Mensual Junio 2025,1,7,Daniel J,0,vicente bernat,0,0 - 2,0,2,2,vicente bernat,FALSE
+Mensual Junio 2025,1,8,Alan,0,Jaime,0,2 - 1,2,1,1,Alan,FALSE
+Mensual Junio 2025,1,9,JuanMa,0,Poxolo,0,0 - 2,0,2,2,Poxolo,FALSE
+Mensual Junio 2025,2,1,Giacomo,3,Pat,3,0 - 2,0,2,2,Pat,FALSE
+Mensual Junio 2025,2,2,Aitor,3,Ferran,3,2 - 0,2,0,1,Aitor,FALSE
+Mensual Junio 2025,2,3,Hugo,3,Artero,3,2 - 0,2,0,1,Hugo,FALSE
+Mensual Junio 2025,2,4,Alan,3,Poxolo,3,1 - 1,1,1,,,TRUE
+Mensual Junio 2025,2,5,vicente bernat,3,Xelu,0,0 - 2,0,2,2,Xelu,FALSE
+Mensual Junio 2025,2,6,alejandro reguera,0,Sergio,0,0 - 2,0,2,2,Sergio,FALSE
+Mensual Junio 2025,2,7,Jaime,0,Figols no,0,2 - 0,2,0,1,Jaime,FALSE
+Mensual Junio 2025,2,8,JuanMa,0,Daniel J,0,0 - 2,0,2,2,Daniel J,FALSE
+Mensual Junio 2025,2,9,Borja,0,Teba,0,2 - 1,2,1,1,Borja,FALSE
+Mensual Junio 2025,3,1,Aitor,6,Pat,6,1 - 0,1,0,1,Aitor,FALSE
+Mensual Junio 2025,3,2,Hugo,6,Alan,4,2 - 1,2,1,1,Hugo,FALSE
+Mensual Junio 2025,3,3,Poxolo,4,Sergio,3,0 - 2,0,2,2,Sergio,FALSE
+Mensual Junio 2025,3,4,Daniel J,3,Xelu,3,0 - 2,0,2,2,Xelu,FALSE
+Mensual Junio 2025,3,5,vicente bernat,3,Borja,3,2 - 0,2,0,1,vicente bernat,FALSE
+Mensual Junio 2025,3,6,Jaime,3,Ferran,3,0 - 2,0,2,2,Ferran,FALSE
+Mensual Junio 2025,3,7,Artero,3,Giacomo,3,2 - 0,2,0,1,Artero,FALSE
+Mensual Junio 2025,3,8,alejandro reguera,0,JuanMa,0,2 - 0,2,0,1,alejandro reguera,FALSE
+Mensual Junio 2025,3,9,Teba,0,Figols no,0,2 - 0,2,0,1,Teba,FALSE
+Mensual Junio 2025,4,1,Aitor,9,Hugo,9,0 - 2,0,2,2,Hugo,FALSE
+Mensual Junio 2025,4,2,Ferran,6,Artero,6,2 - 1,2,1,1,Ferran,FALSE
+Mensual Junio 2025,4,3,Sergio,6,Xelu,6,2 - 0,2,0,1,Sergio,FALSE
+Mensual Junio 2025,4,4,Pat,6,vicente bernat,6,0 - 2,0,2,2,vicente bernat,FALSE
+Mensual Junio 2025,4,5,Poxolo,4,Teba,3,2 - 0,2,0,1,Poxolo,FALSE
+Mensual Junio 2025,4,6,Alan,4,alejandro reguera,3,2 - 0,2,0,1,Alan,FALSE
+Mensual Junio 2025,4,7,Borja,3,Jaime,3,2 - 0,2,0,1,Borja,FALSE
+Mensual Junio 2025,4,8,Daniel J,3,Giacomo,3,1 - 2,1,2,2,Giacomo,FALSE
+Mensual Junio 2025,4,9,Figols no,0,JuanMa,0,0 - 2,0,2,2,JuanMa,FALSE
+Mensual Junio 2025,5,1,Hugo,12,Ferran,9,0 - 2,0,2,2,Ferran,FALSE
+Mensual Junio 2025,5,2,Aitor,9,Sergio,9,2 - 1,2,1,1,Aitor,FALSE
+Mensual Junio 2025,5,3,vicente bernat,9,Alan,7,0 - 2,0,2,2,Alan,FALSE
+Mensual Junio 2025,5,4,Poxolo,7,Xelu,6,0 - 2,0,2,2,Xelu,FALSE
+Mensual Junio 2025,5,5,Artero,6,Borja,6,0 - 2,0,2,2,Borja,FALSE
+Mensual Junio 2025,5,6,Pat,6,Jaime,3,0 - 2,0,2,2,Jaime,FALSE
+Mensual Junio 2025,5,7,Giacomo,6,alejandro reguera,3,2 - 1,2,1,1,Giacomo,FALSE
+Mensual Junio 2025,5,8,Teba,3,JuanMa,3,2 - 1,2,1,1,Teba,FALSE
+Mensual Junio 2025,5,9,Daniel J,3,Figols no,0,0 - 2,0,2,2,Figols no,FALSE
+Mensual Julio 2025,1,1,Adrian,0,Jaime,0,2 - 1,2,1,1,Adrian,FALSE
+Mensual Julio 2025,1,2,Alex,0,Euge,0,2 - 0,2,0,1,Alex,FALSE
+Mensual Julio 2025,1,3,Poxo,0,D. Bagan,0,2 - 0,2,0,1,Poxo,FALSE
+Mensual Julio 2025,1,4,Nieto,0,Ferran,0,2 - 1,2,1,1,Nieto,FALSE
+Mensual Julio 2025,1,5,Teba,0,David F,0,0 - 2,0,2,2,David F,FALSE
+Mensual Julio 2025,1,6,Aitor,0,Nilo,0,0 - 2,0,2,2,Nilo,FALSE
+Mensual Julio 2025,1,7,Alan,0,BYE,0,2 - 0,2,0,1,Alan,FALSE
+Mensual Julio 2025,2,1,Adrian,3,Nieto,3,0 - 2,0,2,2,Nieto,FALSE
+Mensual Julio 2025,2,2,Alan,3,David F,3,1 - 2,1,2,2,David F,FALSE
+Mensual Julio 2025,2,3,Poxo,3,Alex,3,1 - 2,1,2,2,Alex,FALSE
+Mensual Julio 2025,2,4,Nilo,3,Euge,0,2 - 1,2,1,1,Nilo,FALSE
+Mensual Julio 2025,2,5,Teba,0,Ferran,0,1 - 2,1,2,2,Ferran,FALSE
+Mensual Julio 2025,2,6,D. Bagan,0,Aitor,0,2 - 0,2,0,1,D. Bagan,FALSE
+Mensual Julio 2025,2,7,Jaime,0,BYE,0,2 - 0,2,0,1,Jaime,FALSE
+Mensual Julio 2025,3,1,Nieto,6,David F,6,2 - 0,2,0,1,Nieto,FALSE
+Mensual Julio 2025,3,2,Alex,6,Nilo,6,2 - 1,2,1,1,Alex,FALSE
+Mensual Julio 2025,3,3,D. Bagan,3,Jaime,3,2 - 1,2,1,1,D. Bagan,FALSE
+Mensual Julio 2025,3,4,Adrian,3,Poxo,3,0 - 2,0,2,2,Poxo,FALSE
+Mensual Julio 2025,3,5,Alan,3,Ferran,3,0 - 2,0,2,2,Ferran,FALSE
+Mensual Julio 2025,3,6,Teba,0,Euge,0,0 - 2,0,2,2,Euge,FALSE
+Mensual Julio 2025,3,7,Aitor,0,BYE,0,2 - 0,2,0,1,Aitor,FALSE
+Mensual Julio 2025,4,1,Nieto,9,Alex,9,2 - 1,2,1,1,Nieto,FALSE
+Mensual Julio 2025,4,2,Poxo,6,Ferran,6,0 - 2,0,2,2,Ferran,FALSE
+Mensual Julio 2025,4,3,Nilo,6,David F,6,2 - 1,2,1,1,Nilo,FALSE
+Mensual Julio 2025,4,4,D. Bagan,6,Euge,3,2 - 1,2,1,1,D. Bagan,FALSE
+Mensual Julio 2025,4,5,Adrian,3,Alan,3,0 - 2,0,2,2,Alan,FALSE
+Mensual Julio 2025,4,6,Aitor,3,Jaime,3,2 - 1,2,1,1,Aitor,FALSE
+Mensual Julio 2025,4,7,Teba,0,BYE,0,2 - 0,2,0,1,Teba,FALSE
