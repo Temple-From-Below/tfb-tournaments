@@ -1,0 +1,38 @@
+raw_name,canonical_player_name,confidence,note
+Adrian,Adrian,ok,
+Aitor,Aitor,ok,
+alejandro reguera,Alejandro Reguera,alta,"Coincide con el mismo usuario de mtgdecks (regui) que 'Alex' en Julio 2026"
+Alex,Alejandro Reguera,alta,"Coincide con el mismo usuario de mtgdecks (regui) que 'alejandro reguera' en Junio 2026"
+Alfieri,Alfieri,ok,
+Artero,Artero,ok,
+Borja,Borja,ok,
+Chema,Chema,ok,
+D. Bagan,Dani Bagan,alta,"Mismo usuario de mtgdecks (dani bagan / daniel bagan) que 'Dani B' y 'Dani Bagan'"
+Dani B,Dani Bagan,alta,"Mismo usuario de mtgdecks (dani bagan) que 'Dani Bagan' y 'D. Bagan'"
+Dani Bagan,Dani Bagan,ok,
+Daniel J,Daniel J,ok,
+David F,David F,ok,
+Euge,Euge,ok,
+Ferran,Ferran Ruiz,media,"Mismo usuario de mtgdecks (ferran ruiz) que 'Ruiz' en Mayo 2026 - revisar"
+Figols,Figols,revisar,"'Figols no' (Junio 2026) podria ser la misma persona o un alias distinto - sin confirmar, no fusionado"
+Figols no,Figols no,revisar,"Podria ser la misma persona que 'Figols' con otro alias en mtgdecks - sin confirmar, no fusionado"
+Giacomo,Giacomo,ok,
+Hector,Hector,ok,
+Hugo,Hugo,ok,
+Jaime,Jaime,ok,
+Jorge,Jorge,ok,
+JuanMa,JuanMa,ok,
+Miquel,Miquel,ok,
+Nieto,Nieto,ok,
+Nilo,Nilo,ok,
+Paco,Paco,ok,
+Pat,Pat,ok,
+Poxo,Poxolo,alta,"Mismo usuario de mtgdecks (poxolo) que 'Poxolo' en Junio 2026"
+Poxolo,Poxolo,ok,
+Ruben,Ruben,media,"Podria ser la misma persona que 'Ruben I' (Abril 2026) - revisar"
+Ruben I,Ruben,media,"Podria ser la misma persona que 'Ruben' (Mayo 2026) - revisar"
+Ruiz,Ferran Ruiz,media,"Mismo usuario de mtgdecks (ferran1997) que 'Ferran' en Junio/Julio 2026 - revisar"
+Sergio,Sergio,ok,
+Teba,Teba,ok,
+vicente bernat,vicente bernat,ok,
+Xelu,Xelu,ok,
