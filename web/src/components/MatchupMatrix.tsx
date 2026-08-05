@@ -32,7 +32,7 @@ function cellTextColor(winratePct: number | null, mode: "light" | "dark"): strin
 
 export function MatchupMatrix({ stats, matches }: Props) {
   const mode = useTheme();
-  const [gameMode, setGameMode] = useState<GameMode>("bo1");
+  const [gameMode, setGameMode] = useState<GameMode>("bo3");
 
   const matrix = useMemo(() => computeMatchupMatrix(matches, gameMode), [matches, gameMode]);
 
@@ -44,11 +44,11 @@ export function MatchupMatrix({ stats, matches }: Props) {
   return (
     <div>
       <div className="panel-controls">
-        <button type="button" className={`chip${gameMode === "bo1" ? " active" : ""}`} onClick={() => setGameMode("bo1")}>
-          BO1 (juego individual)
-        </button>
         <button type="button" className={`chip${gameMode === "bo3" ? " active" : ""}`} onClick={() => setGameMode("bo3")}>
-          BO3 (partida)
+          BO3
+        </button>
+        <button type="button" className={`chip${gameMode === "bo1" ? " active" : ""}`} onClick={() => setGameMode("bo1")}>
+          BO1
         </button>
       </div>
 
@@ -75,9 +75,16 @@ export function MatchupMatrix({ stats, matches }: Props) {
                       {rowArchetype}
                     </th>
                     {axes.map((colArchetype) => {
-                      const cell = matrix.get(rowArchetype)?.get(colArchetype) ?? null;
+                      // La diagonal (arquetipo contra si mismo) no aporta
+                      // informacion de matchup real (por definicion tiende
+                      // a 50%) y ademas solo hay datos para los pocos
+                      // arquetipos que alguna vez se han cruzado consigo
+                      // mismo — para que la diagonal sea consistente para
+                      // todos los arquetipos, se deja siempre en blanco.
+                      const isSelf = rowArchetype === colArchetype;
+                      const cell = isSelf ? null : matrix.get(rowArchetype)?.get(colArchetype) ?? null;
                       const wr = cell?.winratePct ?? null;
-                      const empty = !cell || cell.games === 0;
+                      const empty = isSelf || !cell || cell.games === 0 || wr === null;
                       const title = empty
                         ? `${rowArchetype} vs ${colArchetype}: sin partidas registradas`
                         : `${rowArchetype} vs ${colArchetype}: ${cell.wins}-${cell.losses}-${cell.draws} (${wr!.toFixed(0)}%)`;

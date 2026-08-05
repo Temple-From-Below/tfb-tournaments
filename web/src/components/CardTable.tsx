@@ -8,12 +8,13 @@ interface Props {
   cards: CardStat[];
 }
 
-const columns: { key: keyof CardStat; label: string; dir?: "asc" | "desc" }[] = [
-  { key: "card_name", label: "Carta", dir: "asc" },
-  { key: "typeLabel", label: "Tipo", dir: "asc" },
-  { key: "colors", label: "Color", dir: "asc" },
+const columns: { key: keyof CardStat; label: string; dir?: "asc" | "desc"; left?: boolean }[] = [
+  { key: "card_name", label: "Carta", dir: "asc", left: true },
+  { key: "typeLabel", label: "Tipo", dir: "asc", left: true },
+  { key: "colors", label: "Color", dir: "asc", left: true },
   { key: "decksMain", label: "Mazos" },
   { key: "pctOfDecks", label: "% Mazos" },
+  { key: "totalCopiesMain", label: "Total cartas" },
   { key: "avgCopiesMain", label: "Copias medias" },
   { key: "decksSide", label: "En banquillo" },
 ];
@@ -85,7 +86,7 @@ export function CardTable({ cards }: Props) {
               {columns.map((c) => (
                 <th
                   key={c.key}
-                  className={`${c.key === "card_name" ? "left " : ""}${sortKey === c.key ? "sorted" : ""}`}
+                  className={`${c.left ? "left " : ""}${sortKey === c.key ? "sorted" : ""}`}
                   onClick={() => toggle(c.key, c.dir ?? "desc")}
                 >
                   {c.label}
@@ -107,6 +108,7 @@ export function CardTable({ cards }: Props) {
                 <td className="left">{c.colors || "—"}</td>
                 <td className="num tabular">{c.decksMain}</td>
                 <td className="num tabular">{c.pctOfDecks.toFixed(1)}%</td>
+                <td className="num tabular">{c.totalCopiesMain}</td>
                 <td className="num tabular">{c.avgCopiesMain.toFixed(1)}</td>
                 <td className="num tabular">{c.decksSide}</td>
               </tr>

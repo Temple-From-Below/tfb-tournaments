@@ -25,7 +25,11 @@ export interface ArchetypeStat {
   winratePct: number | null;
 }
 
-export function computeArchetypeStats(standings: StandingRow[], matches: MatchRow[]): ArchetypeStat[] {
+export function computeArchetypeStats(
+  standings: StandingRow[],
+  matches: MatchRow[],
+  mode: GameMode = "bo3"
+): ArchetypeStat[] {
   const known = standings.filter((s) => s.archetype);
   const deckCounts = new Map<string, number>();
   for (const s of known) {
@@ -43,6 +47,11 @@ export function computeArchetypeStats(standings: StandingRow[], matches: MatchRo
   }
   for (const m of matches) {
     if (m.is_bye) continue;
+    if (mode === "bo1") {
+      if (m.archetype_1) bump(m.archetype_1, m.player_1_wins, m.player_2_wins, 0);
+      if (m.archetype_2) bump(m.archetype_2, m.player_2_wins, m.player_1_wins, 0);
+      continue;
+    }
     if (m.archetype_1) {
       if (m.is_draw) bump(m.archetype_1, 0, 0, 1);
       else if (m.player_winner === 1) bump(m.archetype_1, 1, 0, 0);

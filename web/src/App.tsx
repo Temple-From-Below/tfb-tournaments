@@ -70,6 +70,7 @@ export default function App() {
       <KpiRow
         tournamentCount={filtered.tournaments.length}
         deckCount={filtered.standings.length}
+        archetypeCount={archetypeStats.length}
         playerCount={playerCount}
         matchCount={filtered.matches.filter((m) => !m.is_bye).length}
       />
@@ -80,7 +81,7 @@ export default function App() {
           Cuota de cada arquetipo (mazos sin arquetipo asignado en mtgdecks cuentan como su propio
           nombre de mazo). Ordena por columna.
         </p>
-        <ArchetypeMetaTable stats={archetypeStats} colorScale={colorScale} />
+        <ArchetypeMetaTable standings={filtered.standings} matches={filtered.matches} colorScale={colorScale} />
       </section>
 
       <section className="panel">

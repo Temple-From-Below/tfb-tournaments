@@ -1,14 +1,16 @@
 interface Props {
   tournamentCount: number;
   deckCount: number;
+  archetypeCount: number;
   playerCount: number;
   matchCount: number;
 }
 
-export function KpiRow({ tournamentCount, deckCount, playerCount, matchCount }: Props) {
+export function KpiRow({ tournamentCount, deckCount, archetypeCount, playerCount, matchCount }: Props) {
   const tiles = [
     { label: "Torneos", value: tournamentCount },
     { label: "Mazos", value: deckCount },
+    { label: "Arquetipos", value: archetypeCount },
     { label: "Jugadores", value: playerCount },
     { label: "Partidas", value: matchCount },
   ];
