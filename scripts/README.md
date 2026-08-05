@@ -16,7 +16,9 @@ py -m venv .venv
 
 ## Uso
 
-Con `tournaments_info.csv` actualizado (nuevo torneo + `mtgdecks_url`):
+Con `tournaments_info.csv` actualizado (nuevo torneo + `mtgdecks_url`) y,
+tras el primer torneo nuevo con jugadores repetidos, revisando
+`data/player_aliases.csv` (ver mas abajo):
 
 ```powershell
 # 1. Standings/arquetipos de cada torneo -> data/tournaments_info_mtgdecks.csv
@@ -25,12 +27,41 @@ Con `tournaments_info.csv` actualizado (nuevo torneo + `mtgdecks_url`):
 # 2. Listas de cartas de cada mazo -> data/lists_mtgdecks.csv
 .\.venv\Scripts\python.exe scripts\scrape_decklists.py
 # --limit N para probar solo con los primeros N mazos
+
+# 3. Revisar/completar data/player_aliases.csv con los jugadores nuevos
+#    (una fila por nombre nuevo en tournament_standings.csv; ver seccion
+#    "Alias de jugadores" mas abajo)
+
+# 4. Unir todo y generar los JSON que consume la web -> web/public/data/*.json
+.\.venv\Scripts\python.exe scripts\build_dataset.py
+
+# 5. Descargar las imagenes de cartas referenciadas (solo las nuevas) ->
+#    web/public/img/cards/ + reescribe cards.json a rutas locales
+.\.venv\Scripts\python.exe scripts\download_card_images.py
 ```
 
-Ambos scripts son deterministas y regeneran el CSV completo desde cero cada
-vez (leen todos los torneos de `tournaments_info.csv` / todos los mazos de
-`tournaments_info_mtgdecks.csv`), asi que basta con volver a ejecutarlos
-tras anadir un torneo nuevo.
+Todos los scripts son deterministas y regeneran su salida completa desde
+cero cada vez, asi que basta con volver a ejecutarlos en orden tras anadir
+un torneo nuevo (el paso 5 solo descarga las imagenes que no existan ya en
+disco).
+
+## Alias de jugadores (`data/player_aliases.csv`)
+
+Un mismo jugador no siempre aparece con el mismo nombre en cada torneo
+(apodo, nombre completo, iniciales...). `build_dataset.py` agrega las
+estadisticas por jugador usando la columna `canonical_player_name` de este
+fichero, no el nombre crudo. Tiene una fila por cada nombre visto en
+`tournament_standings.csv`; al anadir un torneo con jugadores nuevos:
+
+1. Ejecuta `scrape_tournament_decks.py` y luego compara los nombres nuevos
+   de `tournament_standings.csv` contra los ya existentes en
+   `player_aliases.csv`.
+2. Anade una fila por nombre nuevo. Si es alguien que ya jugaba con otro
+   nombre/apodo, pon el mismo `canonical_player_name` que su fila anterior
+   (la columna `note` explica el criterio en los casos ya detectados).
+3. Los casos marcados `confidence=revisar` son alias sospechados pero sin
+   confirmar - contrastarlos y corregir el `canonical_player_name` si hace
+   falta.
 
 ## Notas de diseno / caveats
 
