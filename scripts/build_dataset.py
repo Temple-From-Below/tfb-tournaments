@@ -26,6 +26,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from download_card_images import sync_images
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 OUT = ROOT / "web" / "public" / "data"
@@ -157,7 +159,12 @@ def main():
         "rarity", "colors", "image_url",
     ]
     cd_out = cd[cd_cols].sort_values(["date", "rank", "section", "card_name"])
-    write_json("cards.json", cd_out.to_dict(orient="records"))
+    card_records = cd_out.to_dict(orient="records")
+    # Descarga (si hace falta) las imagenes y reescribe image_url a rutas
+    # locales ANTES de escribir el JSON, para que un build normal nunca deje
+    # cards.json apuntando a mtgdecks.net (el navegador bloquea ese hotlink).
+    sync_images(card_records)
+    write_json("cards.json", card_records)
 
     print("\nListo.")
 

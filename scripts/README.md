@@ -32,18 +32,19 @@ tras el primer torneo nuevo con jugadores repetidos, revisando
 #    (una fila por nombre nuevo en tournament_standings.csv; ver seccion
 #    "Alias de jugadores" mas abajo)
 
-# 4. Unir todo y generar los JSON que consume la web -> web/public/data/*.json
+# 4. Unir todo, generar los JSON que consume la web (web/public/data/*.json)
+#    y descargar las imagenes de cartas nuevas a web/public/img/cards/
 .\.venv\Scripts\python.exe scripts\build_dataset.py
-
-# 5. Descargar las imagenes de cartas referenciadas (solo las nuevas) ->
-#    web/public/img/cards/ + reescribe cards.json a rutas locales
-.\.venv\Scripts\python.exe scripts\download_card_images.py
 ```
 
 Todos los scripts son deterministas y regeneran su salida completa desde
 cero cada vez, asi que basta con volver a ejecutarlos en orden tras anadir
-un torneo nuevo (el paso 5 solo descarga las imagenes que no existan ya en
-disco).
+un torneo nuevo. `build_dataset.py` descarga las imagenes de cartas como
+ultimo paso automaticamente (solo las que no existan ya en disco) y deja
+`cards.json` apuntando siempre a rutas locales — **no hace falta (ni hay
+que acordarse de) ejecutar `download_card_images.py` a mano**; solo sirve
+como script suelto si alguna vez quieres forzar una redescarga sin
+rehacer todo el pipeline.
 
 ## Alias de jugadores (`data/player_aliases.csv`)
 

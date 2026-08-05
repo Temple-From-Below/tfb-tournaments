@@ -47,10 +47,18 @@ def local_rel_path(url: str) -> str:
     return f"img/cards/{flat}"
 
 
-def main():
-    cards = json.loads(CARDS_JSON.read_text(encoding="utf-8"))
+def sync_images(cards: list[dict], quiet: bool = False) -> list[dict]:
+    """Descarga (si hace falta) las imagenes referenciadas por `cards` y
+    reescribe `image_url` en cada dict a la ruta local relativa, in-place.
+
+    Reutilizable: la llama tanto este script en CLI como build_dataset.py
+    al final de cada build, para que un build normal SIEMPRE deje cards.json
+    con rutas locales — sin depender de acordarse de encadenar este script
+    a mano (ya se nos olvido una vez).
+    """
     urls = sorted({c["image_url"] for c in cards if c.get("image_url")})
-    print(f"{len(urls)} imagenes unicas a comprobar/descargar")
+    if not quiet:
+        print(f"{len(urls)} imagenes unicas a comprobar/descargar")
 
     url_to_rel: dict[str, str] = {}
     downloaded = skipped = failed = 0
@@ -70,17 +78,23 @@ def main():
         except Exception as e:  # noqa: BLE001
             print(f"  [aviso] fallo descargando {url}: {e}")
             failed += 1
-        if i % 50 == 0:
+        if not quiet and i % 50 == 0:
             print(f"  ...{i}/{len(urls)}")
 
     for c in cards:
         if c.get("image_url") in url_to_rel:
             c["image_url"] = url_to_rel[c["image_url"]]
 
+    print(f"Imagenes -> descargadas: {downloaded}, ya existentes: {skipped}, fallidas: {failed}")
+    return cards
+
+
+def main():
+    cards = json.loads(CARDS_JSON.read_text(encoding="utf-8"))
+    sync_images(cards)
     CARDS_JSON.write_text(
         json.dumps(cards, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
     )
-    print(f"\nDescargadas: {downloaded}, ya existentes: {skipped}, fallidas: {failed}")
     print(f"cards.json actualizado con rutas locales -> {CARDS_JSON}")
 
 
