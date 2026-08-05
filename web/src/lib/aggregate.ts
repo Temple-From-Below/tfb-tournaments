@@ -1,5 +1,15 @@
 import type { CardRow, MatchRow, StandingRow, Tournament } from "../types";
 
+export type GameMode = "bo1" | "bo3";
+
+/** Winrate = victorias / (victorias + derrotas). Los empates NO puntuan
+ * como medio punto: se excluyen tanto del numerador como del denominador
+ * (en bo1 no hay empates de todos modos, ya que se cuenta juego a juego). */
+function winratePctOf(wins: number, losses: number): number | null {
+  const decisive = wins + losses;
+  return decisive > 0 ? (wins / decisive) * 100 : null;
+}
+
 // ---------------------------------------------------------------------------
 // Arquetipos: registro de victorias/derrotas/empates y cuota de metagame
 // ---------------------------------------------------------------------------
@@ -58,7 +68,7 @@ export function computeArchetypeStats(standings: StandingRow[], matches: MatchRo
       losses: rec.losses,
       draws: rec.draws,
       games,
-      winratePct: games > 0 ? ((rec.wins + 0.5 * rec.draws) / games) * 100 : null,
+      winratePct: winratePctOf(rec.wins, rec.losses),
     };
   });
 }
@@ -89,8 +99,17 @@ export interface MatchupCell {
   winratePct: number | null;
 }
 
+/**
+ * mode "bo3" (partida): 1 victoria/derrota/empate por match, segun quien
+ * gano la partida (best-of-3) completa.
+ * mode "bo1" (juego individual): cada partida vale tantas victorias/
+ * derrotas como juegos individuales se jugaron dentro de ella
+ * (player_1_wins/player_2_wins) — un 2-1 cuenta como 2 juegos ganados por
+ * un lado y 1 por el otro, no como "1 victoria" agregada.
+ */
 export function computeMatchupMatrix(
-  matches: MatchRow[]
+  matches: MatchRow[],
+  mode: GameMode = "bo1"
 ): Map<string, Map<string, MatchupCell>> {
   const matrix = new Map<string, Map<string, MatchupCell>>();
   function bump(row: string, col: string, w: number, l: number, d: number) {
@@ -101,12 +120,15 @@ export function computeMatchupMatrix(
     cur.losses += l;
     cur.draws += d;
     cur.games = cur.wins + cur.losses + cur.draws;
-    cur.winratePct = cur.games > 0 ? ((cur.wins + 0.5 * cur.draws) / cur.games) * 100 : null;
+    cur.winratePct = winratePctOf(cur.wins, cur.losses);
     rowMap.set(col, cur);
   }
   for (const m of matches) {
     if (m.is_bye || !m.archetype_1 || !m.archetype_2) continue;
-    if (m.is_draw) {
+    if (mode === "bo1") {
+      bump(m.archetype_1, m.archetype_2, m.player_1_wins, m.player_2_wins, 0);
+      bump(m.archetype_2, m.archetype_1, m.player_2_wins, m.player_1_wins, 0);
+    } else if (m.is_draw) {
       bump(m.archetype_1, m.archetype_2, 0, 0, 1);
       bump(m.archetype_2, m.archetype_1, 0, 0, 1);
     } else if (m.player_winner === 1) {
@@ -130,6 +152,7 @@ export interface PlayerEntry {
   rank: number;
   archetype: string | null;
   deck_title: string | null;
+  spiciness: number | null;
   wins: number;
   losses: number;
   draws: number;
@@ -147,14 +170,47 @@ export interface PlayerStat {
   draws: number;
   points: number;
   winratePct: number | null;
+  avgSpiciness: number | null;
   entries: PlayerEntry[];
+}
+
+/** Tally de juegos individuales (bo1) por jugador, sumando
+ * player_1_wins/player_2_wins de cada partida (no bye) en la que aparece —
+ * opcionalmente separado por torneo, para el detalle expandible. */
+function bo1TallyByPlayer(
+  matches: MatchRow[],
+  keyFn: (m: MatchRow, side: 1 | 2) => string
+): Map<string, { wins: number; losses: number }> {
+  const tally = new Map<string, { wins: number; losses: number }>();
+  function bump(key: string, w: number, l: number) {
+    const cur = tally.get(key) ?? { wins: 0, losses: 0 };
+    cur.wins += w;
+    cur.losses += l;
+    tally.set(key, cur);
+  }
+  for (const m of matches) {
+    if (m.is_bye) continue;
+    bump(keyFn(m, 1), m.player_1_wins, m.player_2_wins);
+    bump(keyFn(m, 2), m.player_2_wins, m.player_1_wins);
+  }
+  return tally;
 }
 
 export function computePlayerStats(
   standings: StandingRow[],
-  tournaments: Tournament[]
+  matches: MatchRow[],
+  tournaments: Tournament[],
+  mode: GameMode = "bo3"
 ): PlayerStat[] {
   const urlByTournament = new Map(tournaments.map((t) => [t.tournament_name, t.mtgdecks_url]));
+
+  const overallBo1 = bo1TallyByPlayer(matches, (m, side) =>
+    side === 1 ? m.player_1_canonical : m.player_2_canonical
+  );
+  const perTournamentBo1 = bo1TallyByPlayer(matches, (m, side) =>
+    `${side === 1 ? m.player_1_canonical : m.player_2_canonical}|${m.tournament_name}`
+  );
+
   const byPlayer = new Map<string, PlayerStat>();
   for (const s of standings) {
     let p = byPlayer.get(s.canonical_player_name);
@@ -167,33 +223,52 @@ export function computePlayerStats(
         draws: 0,
         points: 0,
         winratePct: null,
+        avgSpiciness: null,
         entries: [],
       };
       byPlayer.set(s.canonical_player_name, p);
     }
     p.events += 1;
-    p.wins += s.wins;
-    p.losses += s.losses;
-    p.draws += s.draws;
     p.points += s.points;
+
+    const bo1Entry = perTournamentBo1.get(`${s.canonical_player_name}|${s.tournament_name}`);
+    const entryWins = mode === "bo1" ? bo1Entry?.wins ?? 0 : s.wins;
+    const entryLosses = mode === "bo1" ? bo1Entry?.losses ?? 0 : s.losses;
+    const entryDraws = mode === "bo1" ? 0 : s.draws;
+
     p.entries.push({
       tournament_name: s.tournament_name,
       date: s.date,
       rank: s.rank,
       archetype: s.archetype,
       deck_title: s.deck_title,
-      wins: s.wins,
-      losses: s.losses,
-      draws: s.draws,
+      spiciness: s.spiciness,
+      wins: entryWins,
+      losses: entryLosses,
+      draws: entryDraws,
       points: s.points,
       list_view_url: s.list_view_url,
       visual_view_url: s.visual_view_url,
       mtgdecks_url: urlByTournament.get(s.tournament_name) ?? null,
     });
   }
+
   return Array.from(byPlayer.values()).map((p) => {
-    const games = p.wins + p.losses + p.draws;
-    p.winratePct = games > 0 ? ((p.wins + 0.5 * p.draws) / games) * 100 : null;
+    if (mode === "bo1") {
+      const t = overallBo1.get(p.canonical_player_name) ?? { wins: 0, losses: 0 };
+      p.wins = t.wins;
+      p.losses = t.losses;
+      p.draws = 0;
+    } else {
+      p.wins = p.entries.reduce((s, e) => s + e.wins, 0);
+      p.losses = p.entries.reduce((s, e) => s + e.losses, 0);
+      p.draws = p.entries.reduce((s, e) => s + e.draws, 0);
+    }
+    p.winratePct = winratePctOf(p.wins, p.losses);
+
+    const spiciness = p.entries.map((e) => e.spiciness).filter((v): v is number => v !== null);
+    p.avgSpiciness = spiciness.length > 0 ? spiciness.reduce((a, b) => a + b, 0) / spiciness.length : null;
+
     p.entries.sort((a, b) => a.date.localeCompare(b.date));
     return p;
   });
@@ -203,9 +278,22 @@ export function computePlayerStats(
 // Cartas
 // ---------------------------------------------------------------------------
 
+/** Los 6 tipos "de carta" que se pueden filtrar — deliberadamente no la
+ * lista completa de tipos de Magic (p.ej. sin Planeswalker: pauper apenas
+ * tiene). Una carta con varios de estos tipos en su type_line (p.ej. una
+ * artifact land, o una artifact creature) pertenece a todos ellos. */
+export const CORE_CARD_TYPES = ["Creature", "Artifact", "Enchantment", "Sorcery", "Instant", "Land"] as const;
+export type CoreCardType = (typeof CORE_CARD_TYPES)[number];
+
+function coreTypesOf(typeLine: string | null): CoreCardType[] {
+  const tl = (typeLine ?? "").toLowerCase();
+  return CORE_CARD_TYPES.filter((t) => tl.includes(t.toLowerCase()));
+}
+
 export interface CardStat {
   card_name: string;
-  card_type: string | null;
+  coreTypes: CoreCardType[];
+  typeLabel: string;
   colors: string | null;
   rarity: string | null;
   image_url: string | null;
@@ -219,7 +307,7 @@ export interface CardStat {
 
 export function computeCardStats(cards: CardRow[], totalDecksInFilter: number): CardStat[] {
   interface Acc {
-    card_type: string | null;
+    coreTypes: CoreCardType[];
     colors: string | null;
     rarity: string | null;
     image_url: string | null;
@@ -233,7 +321,7 @@ export function computeCardStats(cards: CardRow[], totalDecksInFilter: number): 
     let acc = map.get(c.card_name);
     if (!acc) {
       acc = {
-        card_type: c.card_type,
+        coreTypes: coreTypesOf(c.type_line),
         colors: c.colors,
         rarity: c.rarity,
         image_url: c.image_url,
@@ -253,7 +341,8 @@ export function computeCardStats(cards: CardRow[], totalDecksInFilter: number): 
   }
   return Array.from(map.entries()).map(([card_name, acc]) => ({
     card_name,
-    card_type: acc.card_type,
+    coreTypes: acc.coreTypes,
+    typeLabel: acc.coreTypes.length > 0 ? acc.coreTypes.join(", ") : "—",
     colors: acc.colors,
     rarity: acc.rarity,
     image_url: acc.image_url,

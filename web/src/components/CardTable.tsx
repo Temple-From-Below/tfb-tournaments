@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import type { CardStat } from "../lib/aggregate";
+import { CORE_CARD_TYPES, type CardStat, type CoreCardType } from "../lib/aggregate";
 import { useSort, sortArrow } from "../lib/useSort";
 
 const base = import.meta.env.BASE_URL;
@@ -10,7 +10,7 @@ interface Props {
 
 const columns: { key: keyof CardStat; label: string; dir?: "asc" | "desc" }[] = [
   { key: "card_name", label: "Carta", dir: "asc" },
-  { key: "card_type", label: "Tipo", dir: "asc" },
+  { key: "typeLabel", label: "Tipo", dir: "asc" },
   { key: "colors", label: "Color", dir: "asc" },
   { key: "decksMain", label: "Mazos" },
   { key: "pctOfDecks", label: "% Mazos" },
@@ -29,19 +29,14 @@ const COLOR_LABELS: Record<string, string> = {
 
 export function CardTable({ cards }: Props) {
   const [search, setSearch] = useState("");
-  const [typeFilter, setTypeFilter] = useState("");
+  const [typeFilter, setTypeFilter] = useState<CoreCardType | "">("");
   const [colorFilter, setColorFilter] = useState("");
-
-  const types = useMemo(
-    () => Array.from(new Set(cards.map((c) => c.card_type).filter(Boolean))).sort() as string[],
-    [cards]
-  );
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     return cards.filter((c) => {
       if (q && !c.card_name.toLowerCase().includes(q)) return false;
-      if (typeFilter && c.card_type !== typeFilter) return false;
+      if (typeFilter && !c.coreTypes.includes(typeFilter)) return false;
       if (colorFilter) {
         const colors = c.colors ?? "";
         if (colorFilter === "M") {
@@ -65,9 +60,9 @@ export function CardTable({ cards }: Props) {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)}>
+        <select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value as CoreCardType | "")}>
           <option value="">Todos los tipos</option>
-          {types.map((t) => (
+          {CORE_CARD_TYPES.map((t) => (
             <option key={t} value={t}>
               {t}
             </option>
@@ -108,7 +103,7 @@ export function CardTable({ cards }: Props) {
                   )}
                   {c.card_name}
                 </td>
-                <td className="left">{c.card_type ?? "—"}</td>
+                <td className="left">{c.typeLabel}</td>
                 <td className="left">{c.colors || "—"}</td>
                 <td className="num tabular">{c.decksMain}</td>
                 <td className="num tabular">{c.pctOfDecks.toFixed(1)}%</td>

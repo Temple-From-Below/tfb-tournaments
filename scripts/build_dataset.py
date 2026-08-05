@@ -102,6 +102,16 @@ def main():
         how="left",
     )
     st["canonical_player_name"] = st["name"].map(canon)
+
+    # Si mtgdecks no asigno arquetipo a un deck, usamos el nombre que le
+    # puso el jugador como "arquetipo" (para que cuente en metagame/matriz
+    # de enfrentamientos en vez de quedar fuera) y spiciness=100 (es, por
+    # definicion, el mazo mas "raro"/unico posible: no encaja en ningun
+    # arquetipo conocido).
+    missing_archetype = st["archetype"].isna()
+    st.loc[missing_archetype, "archetype"] = st.loc[missing_archetype, "deck_title"]
+    st.loc[missing_archetype, "spiciness"] = 100
+
     st_cols = [
         "tournament_name", "date", "format", "rank", "name", "canonical_player_name",
         "points", "wins", "losses", "draws", "omw", "gw", "ogw",
@@ -152,6 +162,10 @@ def main():
     cd["canonical_player_name"] = cd.apply(
         lambda r: deck_id_lookup.get((r["tournament_name"], r["rank"])), axis=1
     )
+    # Mismo criterio que en standings: sin arquetipo -> nombre del deck.
+    missing_cd_archetype = cd["archetype"].isna()
+    cd.loc[missing_cd_archetype, "archetype"] = cd.loc[missing_cd_archetype, "deck_title"]
+
     cd_cols = [
         "tournament_name", "date", "format", "rank", "decklist_id",
         "canonical_player_name", "player_name_mtgdecks", "archetype", "deck_title",
