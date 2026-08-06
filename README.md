@@ -4,7 +4,7 @@ Dashboard con las clasificaciones, el metagame y las listas de los torneos
 mensuales de Pauper que organiza Temple From Below (AetherHub para jugar,
 mtgdecks.net para las listas).
 
-**Web en producción:** https://dbagan13.github.io/tfb-tournaments/
+**Web en producción:** https://temple-from-below.github.io/tfb-tournaments/
 
 ## Stack
 
