@@ -3,8 +3,6 @@ import { CORE_CARD_TYPES, type CardStat } from "../lib/aggregate";
 import { useSort, sortArrow } from "../lib/useSort";
 import { MultiSelect } from "./MultiSelect";
 
-const base = import.meta.env.BASE_URL;
-
 interface Props {
   cards: CardStat[];
 }
@@ -99,7 +97,7 @@ export function CardTable({ cards }: Props) {
               <tr key={c.card_name}>
                 <td className="left">
                   {c.image_url && (
-                    <img className="card-thumb" src={`${base}${c.image_url}`} alt="" loading="lazy" />
+                    <img className="card-thumb" src={c.image_url} alt="" loading="lazy" />
                   )}
                   {c.card_name}
                 </td>

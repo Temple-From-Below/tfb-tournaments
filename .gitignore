@@ -24,6 +24,9 @@ Thumbs.db
 .env
 .env.local
 
+# Card images (served from Scryfall CDN; no need to commit locally)
+web/public/img/cards/
+
 # Claude Code local-only files (not shared team config)
 .claude/settings.local.json
 .claude/scheduled_tasks.lock

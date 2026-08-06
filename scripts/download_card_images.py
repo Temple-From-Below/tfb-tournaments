@@ -1,11 +1,12 @@
-"""Descarga las imagenes de cartas referenciadas en cards.json a
-web/public/img/cards/ y reescribe image_url a una ruta local relativa.
+"""Reescribe image_url en cards.json a URLs de Scryfall CDN.
 
-mtgdecks.net envia Cross-Origin-Resource-Policy en esas imagenes, asi que
-el navegador las bloquea si se enlazan directamente (hotlink) desde otro
-origen (nuestra web). Servirlas nosotros mismos lo evita y de paso hace la
-web independiente de que mtgdecks seas accesible en el momento de la
-visita.
+Las imagenes de mtgdecks.net no se pueden hotlinkear desde otro origen
+(mandan Cross-Origin-Resource-Policy: same-origin). Antes se descargaban
+localmente para servir en la propia web, pero eso anade ~70 MB al
+artefacto de GitHub Pages y provoca timeouts en el deploy.
+
+Scryfall permite hotlink de sus imagenes y ofrece un endpoint publico por
+set + numero de coleccion que funciona directamente en el navegador.
 
 Uso:
     .venv\\Scripts\\python.exe scripts\\download_card_images.py
@@ -16,76 +17,90 @@ import json
 from pathlib import Path
 from urllib.parse import urlparse
 
-import requests
-
 ROOT = Path(__file__).resolve().parent.parent
 CARDS_JSON = ROOT / "web" / "public" / "data" / "cards.json"
-IMG_DIR = ROOT / "web" / "public" / "img" / "cards"
 
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-    )
-}
+SCRYFALL_BASE = "https://api.scryfall.com/cards"
 
 
-def local_rel_path(url: str) -> str:
-    """https://mtgdecks.net/img/card/M14/elvish-mystic-169.jpg
-    -> img/cards/M14-elvish-mystic-169.jpg
+def _collector_from_stem(set_code: str, stem_parts: list[str]) -> str:
+    """Extrae el numero de coleccion de las partes del slug de la carta.
 
-    Sin subcarpetas por set: algunos codigos de set de Magic (p.ej. "CON",
-    Conflux) coinciden con nombres de dispositivo reservados en Windows
-    (CON/PRN/AUX/NUL/COM1-9/LPT1-9) y no se pueden crear/leer como
-    directorio normal (Git y el navegador fallan al acceder). Aplanamos
-    todo a un unico nivel para evitarlo, con el set como prefijo del
-    nombre de fichero (que si es un nombre de fichero valido).
+    Para cartas normales el ultimo segmento es el numero (p.ej. "95").
+    Para cartas PLST el numero de Scryfall es "{set_orig}-{cn}" (p.ej.
+    "a25-43"), que corresponde a los dos ultimos segmentos del slug.
+    Para cartas WC el ultimo segmento es alfanumerico (p.ej. "we89sb").
     """
-    path = urlparse(url).path  # /img/card/M14/elvish-mystic-169.jpg
-    tail = path.split("/img/card/", 1)[-1]
-    flat = tail.replace("/", "-")
-    return f"img/cards/{flat}"
+    if set_code == "plst":
+        return f"{stem_parts[-2]}-{stem_parts[-1]}"
+    return stem_parts[-1]
+
+
+def mtgdecks_to_scryfall_url(url: str) -> str:
+    """https://mtgdecks.net/img/card/VOW/blood-fountain-95.jpg
+    -> https://api.scryfall.com/cards/vow/95?format=image&version=small
+    """
+    path = urlparse(url).path  # /img/card/VOW/blood-fountain-95.jpg
+    tail = path.split("/img/card/", 1)[-1]  # VOW/blood-fountain-95.jpg
+    set_part, filename = tail.split("/", 1)
+    set_code = set_part.lower()
+    stem = filename.rsplit(".", 1)[0]  # blood-fountain-95
+    parts = stem.split("-")
+    collector = _collector_from_stem(set_code, parts)
+    return f"{SCRYFALL_BASE}/{set_code}/{collector}?format=image&version=small"
+
+
+def local_to_scryfall_url(local_path: str) -> str:
+    """img/cards/VOW-blood-fountain-95.jpg
+    -> https://api.scryfall.com/cards/vow/95?format=image&version=small
+
+    Supone que el primer segmento separado por '-' es siempre el set code
+    (todos los set codes de Magic son alfanumericos sin guiones) y que el
+    colector es el ultimo segmento (o los dos ultimos para PLST).
+    """
+    stem = local_path.removeprefix("img/cards/").removesuffix(".jpg")
+    parts = stem.split("-")
+    set_code = parts[0].lower()
+    # parts[1:] son {palabras-del-nombre-de-carta...} + {numero-de-coleccion}
+    collector = _collector_from_stem(set_code, parts[1:])
+    return f"{SCRYFALL_BASE}/{set_code}/{collector}?format=image&version=small"
+
+
+def _to_scryfall(url: str) -> str:
+    """Convierte cualquier formato de image_url a URL de Scryfall CDN."""
+    if url.startswith("http"):
+        host = urlparse(url).hostname or ""
+        if host == "mtgdecks.net" or host.endswith(".mtgdecks.net"):
+            return mtgdecks_to_scryfall_url(url)
+        if host == "scryfall.com" or host.endswith(".scryfall.com") \
+                or host == "cards.scryfall.io" or host.endswith(".scryfall.io"):
+            # Ya es URL de Scryfall; devolver tal cual.
+            return url
+        # Dominio externo desconocido: hotlink podria estar bloqueado.
+        print(f"  [aviso] image_url de dominio desconocido (no se convertira): {url}")
+        return url
+    # Ruta local relativa (img/cards/...)
+    return local_to_scryfall_url(url)
 
 
 def sync_images(cards: list[dict], quiet: bool = False) -> list[dict]:
-    """Descarga (si hace falta) las imagenes referenciadas por `cards` y
-    reescribe `image_url` en cada dict a la ruta local relativa, in-place.
+    """Reescribe `image_url` en cada dict a la URL de Scryfall CDN, in-place.
 
     Reutilizable: la llama tanto este script en CLI como build_dataset.py
     al final de cada build, para que un build normal SIEMPRE deje cards.json
-    con rutas locales — sin depender de acordarse de encadenar este script
-    a mano (ya se nos olvido una vez).
+    con URLs de Scryfall.
     """
     urls = sorted({c["image_url"] for c in cards if c.get("image_url")})
     if not quiet:
-        print(f"{len(urls)} imagenes unicas a comprobar/descargar")
+        print(f"{len(urls)} image_url unicas a convertir a Scryfall CDN")
 
-    url_to_rel: dict[str, str] = {}
-    downloaded = skipped = failed = 0
-    for i, url in enumerate(urls, 1):
-        rel = local_rel_path(url)
-        url_to_rel[url] = rel
-        dest = ROOT / "web" / "public" / rel
-        if dest.exists() and dest.stat().st_size > 0:
-            skipped += 1
-            continue
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        try:
-            resp = requests.get(url, headers=HEADERS, timeout=20)
-            resp.raise_for_status()
-            dest.write_bytes(resp.content)
-            downloaded += 1
-        except Exception as e:  # noqa: BLE001
-            print(f"  [aviso] fallo descargando {url}: {e}")
-            failed += 1
-        if not quiet and i % 50 == 0:
-            print(f"  ...{i}/{len(urls)}")
+    url_map: dict[str, str] = {url: _to_scryfall(url) for url in urls}
 
     for c in cards:
-        if c.get("image_url") in url_to_rel:
-            c["image_url"] = url_to_rel[c["image_url"]]
+        if c.get("image_url") in url_map:
+            c["image_url"] = url_map[c["image_url"]]
 
-    print(f"Imagenes -> descargadas: {downloaded}, ya existentes: {skipped}, fallidas: {failed}")
+    print(f"image_url reescritas a Scryfall CDN: {len(url_map)}")
     return cards
 
 
@@ -95,7 +110,7 @@ def main():
     CARDS_JSON.write_text(
         json.dumps(cards, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
     )
-    print(f"cards.json actualizado con rutas locales -> {CARDS_JSON}")
+    print(f"cards.json actualizado con URLs de Scryfall CDN -> {CARDS_JSON}")
 
 
 if __name__ == "__main__":
