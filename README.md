@@ -10,7 +10,7 @@ mtgdecks.net para las listas).
 
 | Capa | Elección |
 |---|---|
-| Datos fuente | CSV versionados en `data/` (el mismo flujo que ya usabais) |
+| Datos fuente | CSV versionados en `data/`. Clasificación y resultados por ronda de AetherHub. URLs de torneos de MTGDecks |
 | Scraping mtgdecks.net | Python + Playwright (Chromium real headless — mtgdecks.net esta detras de Cloudflare y bloquea peticiones HTTP simples) |
 | Pipeline de agregación | Python + pandas → JSON en `web/public/data/` |
 | Web | React + Vite (estático, sin backend — el dataset es pequeño y se filtra/agrega en el cliente) |
@@ -31,9 +31,9 @@ web/                           app React + Vite
 ## Añadir un torneo nuevo
 
 1. Copiar standings/pairings de AetherHub a `data/tournament_standings.csv` y
-   `data/tournament_pairings.csv` siguiendo `reglas_transformacion_torneos.md`
-   (el flujo de siempre, vía Claude chat web).
-2. Añadir una fila en `data/tournaments_info.csv` (nombre, fecha, formato, `mtgdecks_url`).
+   `data/tournament_pairings.csv` siguiendo `reglas_transformacion_torneos.md` y
+   usando Claude Web para las transformaciones.
+2. Añadir una fila por torneo en `data/tournaments_info.csv` (nombre, fecha, formato, `mtgdecks_url`).
 3. Seguir `scripts/README.md` para: scrapear mtgdecks (arquetipos + listas),
    revisar `data/player_aliases.csv` si hay jugadores nuevos, regenerar los
    JSON y descargar las imágenes de cartas nuevas.
