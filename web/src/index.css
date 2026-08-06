@@ -91,8 +91,24 @@ a {
 }
 
 .app-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 22px;
   margin: 0;
+}
+
+.app-header .logo {
+  height: 3em;
+  width: auto;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .app-header .logo {
+    filter: invert(1);
+  }
+}
+:root[data-theme="dark"] .app-header .logo {
+  filter: invert(1);
 }
 
 .app-header .subtitle {
@@ -222,6 +238,74 @@ section.panel .panel-subtitle {
   color: var(--text-primary);
 }
 
+/* ---------- multiselect (mismo aspecto que un <select>, varias opciones) ---------- */
+.multiselect {
+  position: relative;
+}
+.multiselect-button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  min-width: 140px;
+  justify-content: space-between;
+}
+.multiselect-button:hover {
+  border-color: var(--div-cool);
+}
+.multiselect-caret {
+  color: var(--text-muted);
+  font-size: 10px;
+}
+.multiselect-panel {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 180px;
+  max-height: 260px;
+  overflow-y: auto;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  padding: 6px;
+}
+.multiselect-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  font-size: 13px;
+  color: var(--text-primary);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.multiselect-option:hover {
+  background: var(--surface-2);
+}
+.multiselect-clear {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  font-size: 12px;
+  color: var(--div-cool);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--gridline);
+  padding: 4px 8px 8px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
 /* ---------- tablas ---------- */
 .data-table-wrap {
   overflow-x: auto;
@@ -341,9 +425,24 @@ table.matrix th {
 table.matrix th.row-head {
   text-align: right;
   white-space: nowrap;
-  max-width: 140px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  border-radius: 4px;
+  cursor: pointer;
+}
+table.matrix th.row-head.clickable:hover {
+  color: var(--div-cool);
+}
+table.matrix th.row-head.focused {
+  color: var(--div-cool);
+  font-weight: 700;
+}
+table.matrix th.row-head .axis-label {
+  display: block;
+}
+table.matrix th.row-head .axis-winrate {
+  display: block;
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-top: 2px;
 }
 table.matrix th.col-head {
   writing-mode: vertical-rl;
@@ -360,14 +459,23 @@ td.matrix-cell {
   vertical-align: middle;
   border-radius: 4px;
   font-variant-numeric: tabular-nums;
-  cursor: default;
+  cursor: pointer;
   position: relative;
 }
 td.matrix-cell.empty {
   background: var(--surface-2);
   color: var(--text-muted);
 }
-td.matrix-cell[title]:hover {
+td.matrix-cell:hover,
+td.matrix-cell:focus-visible {
+  outline: 2px solid var(--div-cool);
+  outline-offset: -2px;
+}
+td.matrix-cell.selected {
+  outline: 2px solid var(--text-primary);
+  outline-offset: -2px;
+}
+td.matrix-cell:focus {
   outline: 2px solid var(--div-cool);
   outline-offset: -2px;
 }

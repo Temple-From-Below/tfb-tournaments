@@ -26,17 +26,17 @@ export function PlayerTable({ standings, matches, tournaments }: Props) {
     () => computePlayerStats(standings, matches, tournaments, gameMode),
     [standings, matches, tournaments, gameMode]
   );
-  const { sorted, sortKey, sortDir, toggle } = useSort(players, "wins", "desc");
+  const { sorted, sortKey, sortDir, toggle } = useSort(players, "points", "desc");
   const [expanded, setExpanded] = useState<string | null>(null);
 
   return (
     <div>
       <div className="panel-controls">
         <button type="button" className={`chip${gameMode === "bo3" ? " active" : ""}`} onClick={() => setGameMode("bo3")}>
-          BO3 (partida)
+          BO3
         </button>
         <button type="button" className={`chip${gameMode === "bo1" ? " active" : ""}`} onClick={() => setGameMode("bo1")}>
-          BO1 (juego individual)
+          BO1
         </button>
       </div>
       <div className="data-table-wrap">

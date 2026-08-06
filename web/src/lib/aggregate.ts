@@ -306,23 +306,23 @@ export interface CardStat {
   colors: string | null;
   rarity: string | null;
   image_url: string | null;
-  decksMain: number;
-  decksSide: number;
+  decks: number;
   totalDecks: number;
   pctOfDecks: number;
-  totalCopiesMain: number;
-  avgCopiesMain: number;
+  totalCopies: number;
+  avgCopies: number;
 }
 
+/** No se distingue maindeck/sideboard: una carta cuenta igual jugada en
+ * cualquiera de los dos, y sus copias se suman todas juntas. */
 export function computeCardStats(cards: CardRow[], totalDecksInFilter: number): CardStat[] {
   interface Acc {
     coreTypes: CoreCardType[];
     colors: string | null;
     rarity: string | null;
     image_url: string | null;
-    mainDeckKeys: Set<string>;
-    sideDeckKeys: Set<string>;
-    totalCopiesMain: number;
+    deckKeys: Set<string>;
+    totalCopies: number;
   }
   const map = new Map<string, Acc>();
   for (const c of cards) {
@@ -334,18 +334,13 @@ export function computeCardStats(cards: CardRow[], totalDecksInFilter: number): 
         colors: c.colors,
         rarity: c.rarity,
         image_url: c.image_url,
-        mainDeckKeys: new Set(),
-        sideDeckKeys: new Set(),
-        totalCopiesMain: 0,
+        deckKeys: new Set(),
+        totalCopies: 0,
       };
       map.set(c.card_name, acc);
     }
-    if (c.section === "maindeck") {
-      acc.mainDeckKeys.add(deckKey);
-      acc.totalCopiesMain += c.quantity;
-    } else {
-      acc.sideDeckKeys.add(deckKey);
-    }
+    acc.deckKeys.add(deckKey);
+    acc.totalCopies += c.quantity;
     if (!acc.image_url && c.image_url) acc.image_url = c.image_url;
   }
   return Array.from(map.entries()).map(([card_name, acc]) => ({
@@ -355,11 +350,10 @@ export function computeCardStats(cards: CardRow[], totalDecksInFilter: number): 
     colors: acc.colors,
     rarity: acc.rarity,
     image_url: acc.image_url,
-    decksMain: acc.mainDeckKeys.size,
-    decksSide: acc.sideDeckKeys.size,
+    decks: acc.deckKeys.size,
     totalDecks: totalDecksInFilter,
-    pctOfDecks: totalDecksInFilter > 0 ? (acc.mainDeckKeys.size / totalDecksInFilter) * 100 : 0,
-    totalCopiesMain: acc.totalCopiesMain,
-    avgCopiesMain: acc.mainDeckKeys.size > 0 ? acc.totalCopiesMain / acc.mainDeckKeys.size : 0,
+    pctOfDecks: totalDecksInFilter > 0 ? (acc.deckKeys.size / totalDecksInFilter) * 100 : 0,
+    totalCopies: acc.totalCopies,
+    avgCopies: acc.deckKeys.size > 0 ? acc.totalCopies / acc.deckKeys.size : 0,
   }));
 }

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import logo from "./assets/logo.png";
 import { useData } from "./lib/useData";
 import { computeArchetypeStats, computeCardStats, globalArchetypeRankingDesc } from "./lib/aggregate";
 import { buildArchetypeColorScale } from "./lib/palette";
@@ -56,7 +57,10 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Temple From Below · Pauper</h1>
+        <h1>
+          <img src={logo} alt="" className="logo" />
+          Temple From Below · Pauper
+        </h1>
         <span className="subtitle">Clasificaciones, metagame y listas de los torneos mensuales</span>
       </header>
       <TournamentLinks tournaments={state.data.tournaments} />
@@ -77,31 +81,29 @@ export default function App() {
 
       <section className="panel">
         <h2>Metagame</h2>
-        <p className="panel-subtitle">
-          Cuota de cada arquetipo (mazos sin arquetipo asignado en mtgdecks cuentan como su propio
-          nombre de mazo). Ordena por columna.
-        </p>
+        <p className="panel-subtitle">Cuota de cada arquetipo.</p>
         <ArchetypeMetaTable standings={filtered.standings} matches={filtered.matches} colorScale={colorScale} />
       </section>
 
       <section className="panel">
         <h2>Matriz de enfrentamientos</h2>
         <p className="panel-subtitle">
-          Winrate de la fila contra la columna (los empates no cuentan, ni a favor ni en contra). Pasa
-          el ratón sobre una celda para ver el balance V-D-E.
+          Winrate de cada emparejamiento — haz clic en el nombre para ver solo sus cruces.
         </p>
-        <MatchupMatrix stats={archetypeStats} matches={filtered.matches} />
+        <MatchupMatrix standings={filtered.standings} stats={archetypeStats} matches={filtered.matches} />
       </section>
 
       <section className="panel">
         <h2>Jugadores</h2>
-        <p className="panel-subtitle">Ordenado por victorias totales. Haz clic en un jugador para ver su historial.</p>
+        <p className="panel-subtitle">
+          Resultados de cada jugador - haz clic en un jugador para ver su historial y sus mazos jugados.
+        </p>
         <PlayerTable standings={filtered.standings} matches={filtered.matches} tournaments={filtered.tournaments} />
       </section>
 
       <section className="panel">
         <h2>Cartas</h2>
-        <p className="panel-subtitle">Cartas jugadas en el mazo principal, con % de mazos que las incluyen.</p>
+        <p className="panel-subtitle">Cartas más jugadas.</p>
         <CardTable cards={cardStats} />
       </section>
 

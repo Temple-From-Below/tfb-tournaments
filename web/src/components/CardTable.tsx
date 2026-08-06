@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
-import { CORE_CARD_TYPES, type CardStat, type CoreCardType } from "../lib/aggregate";
+import { CORE_CARD_TYPES, type CardStat } from "../lib/aggregate";
 import { useSort, sortArrow } from "../lib/useSort";
+import { MultiSelect } from "./MultiSelect";
 
 const base = import.meta.env.BASE_URL;
 
@@ -12,45 +13,46 @@ const columns: { key: keyof CardStat; label: string; dir?: "asc" | "desc"; left?
   { key: "card_name", label: "Carta", dir: "asc", left: true },
   { key: "typeLabel", label: "Tipo", dir: "asc", left: true },
   { key: "colors", label: "Color", dir: "asc", left: true },
-  { key: "decksMain", label: "Mazos" },
+  { key: "decks", label: "Mazos" },
   { key: "pctOfDecks", label: "% Mazos" },
-  { key: "totalCopiesMain", label: "Total cartas" },
-  { key: "avgCopiesMain", label: "Copias medias" },
-  { key: "decksSide", label: "En banquillo" },
+  { key: "totalCopies", label: "Total cartas" },
+  { key: "avgCopies", label: "Copias medias" },
 ];
 
-const COLOR_LABELS: Record<string, string> = {
-  W: "Blanco",
-  U: "Azul",
-  B: "Negro",
-  R: "Rojo",
-  G: "Verde",
-  C: "Incoloro",
-};
+const TYPE_OPTIONS = CORE_CARD_TYPES.map((t) => ({ key: t, label: t }));
+
+const COLOR_OPTIONS: { key: string; label: string }[] = [
+  { key: "W", label: "Blanco" },
+  { key: "U", label: "Azul" },
+  { key: "B", label: "Negro" },
+  { key: "R", label: "Rojo" },
+  { key: "G", label: "Verde" },
+  { key: "C", label: "Incoloro" },
+  { key: "M", label: "Multicolor" },
+];
 
 export function CardTable({ cards }: Props) {
   const [search, setSearch] = useState("");
-  const [typeFilter, setTypeFilter] = useState<CoreCardType | "">("");
-  const [colorFilter, setColorFilter] = useState("");
+  const [typeFilters, setTypeFilters] = useState<Set<string>>(new Set());
+  const [colorFilters, setColorFilters] = useState<Set<string>>(new Set());
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     return cards.filter((c) => {
       if (q && !c.card_name.toLowerCase().includes(q)) return false;
-      if (typeFilter && !c.coreTypes.includes(typeFilter)) return false;
-      if (colorFilter) {
+      if (typeFilters.size > 0 && !c.coreTypes.some((t) => typeFilters.has(t))) return false;
+      if (colorFilters.size > 0) {
         const colors = c.colors ?? "";
-        if (colorFilter === "M") {
-          if (colors.length <= 1) return false;
-        } else if (!colors.includes(colorFilter)) {
-          return false;
-        }
+        const matches = Array.from(colorFilters).some((f) =>
+          f === "M" ? colors.length > 1 : colors.includes(f)
+        );
+        if (!matches) return false;
       }
       return true;
     });
-  }, [cards, search, typeFilter, colorFilter]);
+  }, [cards, search, typeFilters, colorFilters]);
 
-  const { sorted, sortKey, sortDir, toggle } = useSort(filtered, "decksMain", "desc");
+  const { sorted, sortKey, sortDir, toggle } = useSort(filtered, "decks", "desc");
 
   return (
     <div>
@@ -61,23 +63,18 @@ export function CardTable({ cards }: Props) {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value as CoreCardType | "")}>
-          <option value="">Todos los tipos</option>
-          {CORE_CARD_TYPES.map((t) => (
-            <option key={t} value={t}>
-              {t}
-            </option>
-          ))}
-        </select>
-        <select value={colorFilter} onChange={(e) => setColorFilter(e.target.value)}>
-          <option value="">Todos los colores</option>
-          {Object.entries(COLOR_LABELS).map(([k, label]) => (
-            <option key={k} value={k}>
-              {label}
-            </option>
-          ))}
-          <option value="M">Multicolor</option>
-        </select>
+        <MultiSelect
+          placeholder="Todos los tipos"
+          options={TYPE_OPTIONS}
+          selected={typeFilters}
+          onChange={setTypeFilters}
+        />
+        <MultiSelect
+          placeholder="Todos los colores"
+          options={COLOR_OPTIONS}
+          selected={colorFilters}
+          onChange={setColorFilters}
+        />
       </div>
       <div className="data-table-wrap">
         <table className="data-table">
@@ -106,11 +103,10 @@ export function CardTable({ cards }: Props) {
                 </td>
                 <td className="left">{c.typeLabel}</td>
                 <td className="left">{c.colors || "—"}</td>
-                <td className="num tabular">{c.decksMain}</td>
+                <td className="num tabular">{c.decks}</td>
                 <td className="num tabular">{c.pctOfDecks.toFixed(1)}%</td>
-                <td className="num tabular">{c.totalCopiesMain}</td>
-                <td className="num tabular">{c.avgCopiesMain.toFixed(1)}</td>
-                <td className="num tabular">{c.decksSide}</td>
+                <td className="num tabular">{c.totalCopies}</td>
+                <td className="num tabular">{c.avgCopies.toFixed(1)}</td>
               </tr>
             ))}
           </tbody>
