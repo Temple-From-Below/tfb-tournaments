@@ -117,7 +117,7 @@ export default function App() {
           mtgdecks.net
         </a>
         . El cruce entre clasificación y listas de mtgdecks se hace por posición final de cada
-        torneo; en caso de empate en la fase final, la correspondencia puede no ser exacta.
+        torneo.
       </p>
     </div>
   );

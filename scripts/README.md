@@ -74,11 +74,11 @@ fichero, no el nombre crudo. Tiene una fila por cada nombre visto en
   en la tabla de decks del torneo, no un ordinal parseado del texto: para
   posiciones empatadas mtgdecks muestra etiquetas de bracket ("Top4",
   "Top8"...) en vez de "3rd/4th/...". Se guarda esa etiqueta cruda en
-  `rank_label` como referencia. El join con `tournament_standings.csv`
-  por `tournament_name` + `rank` es un **heuristico razonable, no
-  garantizado al 100%** (igual que avisa el enunciado del proyecto);
-  `player_name_mtgdecks` sirve de apoyo para un matching por nombre si hace
-  falta desambiguar.
+  `rank_label` como referencia. El join con `tournament_standings.csv` se
+  hace por `tournament_name` + `rank`: al introducirse los datos de forma
+  manual la posicion final siempre coincide entre ambas fuentes, asi que es
+  fiable; `player_name_mtgdecks` queda ademas como apoyo por si hiciera
+  falta revisar algun caso a mano.
 - **`archetype`** puede salir vacio: no todos los mazos subidos a mtgdecks
   tienen un arquetipo asignado por la web.
 - **`deck_title`** puede aparecer truncado con "..." para nombres largos

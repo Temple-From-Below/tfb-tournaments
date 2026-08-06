@@ -54,8 +54,9 @@ npm run build    # build de producción en web/dist
 - El cruce entre `tournament_standings.csv` (AetherHub) y
   `tournaments_info_mtgdecks.csv` (mtgdecks) se hace por posición final
   (`rank`) de cada torneo, no por nombre — mtgdecks no siempre usa el mismo
-  nombre que AetherHub. Es un heurístico razonable pero no infalible; ver
-  `scripts/README.md` para el detalle.
+  nombre que AetherHub. Al introducirse los datos manualmente la posición
+  siempre coincide, así que es fiable; ver `scripts/README.md` para el
+  detalle.
 - Un mismo jugador puede aparecer con distinto nombre en cada torneo; las
   estadísticas por jugador usan `data/player_aliases.csv` para agruparlos.
   Revisar ese fichero al añadir jugadores nuevos.
