@@ -95,7 +95,7 @@ export function CardTable({ cards }: Props) {
             </tr>
           </thead>
           <tbody>
-            {sorted.slice(0, 200).map((c) => (
+            {sorted.slice(0, 50).map((c) => (
               <tr key={c.card_name}>
                 <td className="left">
                   {c.image_url && (
@@ -114,8 +114,8 @@ export function CardTable({ cards }: Props) {
           </tbody>
         </table>
       </div>
-      {sorted.length > 200 && (
-        <p className="panel-subtitle">Mostrando las primeras 200 de {sorted.length} cartas. Afina la búsqueda para ver más.</p>
+      {sorted.length > 50 && (
+        <p className="panel-subtitle">Mostrando las primeras 50 de {sorted.length} cartas. Afina la búsqueda para ver más.</p>
       )}
     </div>
   );
