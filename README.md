@@ -60,8 +60,6 @@ npm run build    # build de producción en web/dist
 - Un mismo jugador puede aparecer con distinto nombre en cada torneo; las
   estadísticas por jugador usan `data/player_aliases.csv` para agruparlos.
   Revisar ese fichero al añadir jugadores nuevos.
-- No todos los mazos de mtgdecks tienen arquetipo asignado por la propia
-  web; para esos mazos se usa el nombre que le puso el jugador como
-  arquetipo (y se les da spiciness 100, al no encajar en ninguno conocido),
-  así que sí cuentan en el % de metagame y en la matriz de enfrentamientos
-  — simplemente como un arquetipo de un único mazo.
+- No todos los mazos de mtgdecks tienen arquetipo asignado por mtgdecks;
+  para esos spicy decks, se usa el nombre que le puso el jugador como
+  arquetipo.
