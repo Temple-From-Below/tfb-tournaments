@@ -81,7 +81,10 @@ export default function App() {
 
       <section className="panel">
         <h2>Metagame</h2>
-        <p className="panel-subtitle">Cuota de cada arquetipo.</p>
+        <p className="panel-subtitle">
+          Cuota de cada arquetipo - haz clic en un arquetipo para ver su historial y las listas
+          jugadas.
+        </p>
         <ArchetypeMetaTable standings={filtered.standings} matches={filtered.matches} colorScale={colorScale} />
       </section>
 
@@ -90,13 +93,14 @@ export default function App() {
         <p className="panel-subtitle">
           Winrate de cada emparejamiento — haz clic en el nombre para ver solo sus cruces.
         </p>
-        <MatchupMatrix standings={filtered.standings} stats={archetypeStats} matches={filtered.matches} />
+        <MatchupMatrix standings={filtered.standings} matches={filtered.matches} />
       </section>
 
       <section className="panel">
         <h2>Jugadores</h2>
         <p className="panel-subtitle">
-          Resultados de cada jugador - haz clic en un jugador para ver su historial y sus mazos jugados.
+          Resultados de cada jugador - haz clic en un jugador para ver su historial y sus listas
+          jugadas.
         </p>
         <PlayerTable standings={filtered.standings} matches={filtered.matches} tournaments={filtered.tournaments} />
       </section>

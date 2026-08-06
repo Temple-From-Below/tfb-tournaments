@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import type { MatchRow, StandingRow } from "../types";
 import { computeArchetypeStats, type GameMode, type ArchetypeStat } from "../lib/aggregate";
 import { colorForSlot } from "../lib/palette";
@@ -24,12 +24,33 @@ const columns: { key: keyof ArchetypeStat; label: string; dir?: "asc" | "desc" }
 export function ArchetypeMetaTable({ standings, matches, colorScale }: Props) {
   const mode = useTheme();
   const [gameMode, setGameMode] = useState<GameMode>("bo3");
+  const [expanded, setExpanded] = useState<string | null>(null);
   const stats = useMemo(
     () => computeArchetypeStats(standings, matches, gameMode),
     [standings, matches, gameMode]
   );
-  const { sorted, sortKey, sortDir, toggle } = useSort(stats, "metaSharePct", "desc");
+  const { sorted, sortKey, sortDir, toggle } = useSort(stats, "metaSharePct", "desc", (k) => {
+    const winLossChain: { key: keyof ArchetypeStat; dir: "asc" | "desc" }[] = [
+      { key: "wins", dir: "desc" },
+      { key: "losses", dir: "asc" },
+    ];
+    if (k === "metaSharePct") return [{ key: "winratePct", dir: "desc" }, ...winLossChain];
+    if (k === "winratePct") return [{ key: "metaSharePct", dir: "desc" }, ...winLossChain];
+    return undefined;
+  });
   const maxShare = Math.max(1, ...stats.map((s) => s.metaSharePct));
+
+  const decksByArchetype = useMemo(() => {
+    const map = new Map<string, StandingRow[]>();
+    for (const s of standings) {
+      if (!s.archetype) continue;
+      const list = map.get(s.archetype) ?? [];
+      list.push(s);
+      map.set(s.archetype, list);
+    }
+    for (const list of map.values()) list.sort((a, b) => a.date.localeCompare(b.date));
+    return map;
+  }, [standings]);
 
   return (
     <div>
@@ -63,29 +84,63 @@ export function ArchetypeMetaTable({ standings, matches, colorScale }: Props) {
             <tbody>
               {sorted.map((r) => {
                 const color = colorForSlot(colorScale.get(r.archetype) ?? null, mode);
+                const isOpen = expanded === r.archetype;
+                const decks = decksByArchetype.get(r.archetype) ?? [];
                 return (
-                  <tr key={r.archetype}>
-                    <td className="left">
-                      <span className="swatch" style={{ background: color }} />
-                      {r.archetype}
-                    </td>
-                    <td className="num">
-                      <div className="hbar-row" style={{ gridTemplateColumns: "1fr 56px", padding: 0 }}>
-                        <div className="hbar-track">
-                          <div
-                            className="hbar-fill"
-                            style={{ width: `${(r.metaSharePct / maxShare) * 100}%`, background: color }}
-                          />
+                  <Fragment key={r.archetype}>
+                    <tr onClick={() => setExpanded(isOpen ? null : r.archetype)} style={{ cursor: "pointer" }}>
+                      <td className="left">
+                        <span className="swatch" style={{ background: color }} />
+                        {r.archetype}
+                      </td>
+                      <td className="num">
+                        <div className="hbar-row" style={{ gridTemplateColumns: "1fr 56px", padding: 0 }}>
+                          <div className="hbar-track">
+                            <div
+                              className="hbar-fill"
+                              style={{ width: `${(r.metaSharePct / maxShare) * 100}%`, background: color }}
+                            />
+                          </div>
+                          <div className="hbar-value">{r.metaSharePct.toFixed(1)}%</div>
                         </div>
-                        <div className="hbar-value">{r.metaSharePct.toFixed(1)}%</div>
-                      </div>
-                    </td>
-                    <td className="num tabular">{r.deckCount}</td>
-                    <td className="num tabular">{r.wins}</td>
-                    <td className="num tabular">{r.losses}</td>
-                    <td className="num tabular">{r.draws}</td>
-                    <td className="num tabular">{r.winratePct === null ? "—" : `${r.winratePct.toFixed(1)}%`}</td>
-                  </tr>
+                      </td>
+                      <td className="num tabular">{r.deckCount}</td>
+                      <td className="num tabular">{r.wins}</td>
+                      <td className="num tabular">{r.losses}</td>
+                      <td className="num tabular">{r.draws}</td>
+                      <td className="num tabular">{r.winratePct === null ? "—" : `${r.winratePct.toFixed(1)}%`}</td>
+                    </tr>
+                    {isOpen && (
+                      <tr className="player-detail-row">
+                        <td colSpan={columns.length}>
+                          {decks.map((d) => (
+                            <div className="entry" key={`${d.tournament_name}-${d.rank}`}>
+                              <span className="pill">{d.tournament_name.replace("Mensual ", "")}</span>
+                              #{d.rank} · {d.canonical_player_name} ({d.wins}-{d.losses}-{d.draws})
+                              {d.list_view_url && (
+                                <>
+                                  {" "}
+                                  ·{" "}
+                                  <a href={d.list_view_url} target="_blank" rel="noreferrer">
+                                    lista
+                                  </a>
+                                </>
+                              )}
+                              {d.visual_view_url && (
+                                <>
+                                  {" "}
+                                  ·{" "}
+                                  <a href={d.visual_view_url} target="_blank" rel="noreferrer">
+                                    visual
+                                  </a>
+                                </>
+                              )}
+                            </div>
+                          ))}
+                        </td>
+                      </tr>
+                    )}
+                  </Fragment>
                 );
               })}
             </tbody>

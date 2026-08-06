@@ -1,12 +1,16 @@
 import { useMemo, useState } from "react";
 import type { MatchRow, StandingRow } from "../types";
-import { computeArchetypeStats, computeMatchupMatrix, type ArchetypeStat, type GameMode } from "../lib/aggregate";
+import {
+  computeArchetypeStats,
+  computeMatchupMatrix,
+  sortArchetypeStatsDefault,
+  type GameMode,
+} from "../lib/aggregate";
 import { DIVERGING } from "../lib/palette";
 import { useTheme } from "../lib/useTheme";
 
 interface Props {
   standings: StandingRow[];
-  stats: ArchetypeStat[];
   matches: MatchRow[];
 }
 
@@ -39,7 +43,7 @@ interface Selected {
   col: string;
 }
 
-export function MatchupMatrix({ standings, stats, matches }: Props) {
+export function MatchupMatrix({ standings, matches }: Props) {
   const mode = useTheme();
   const [gameMode, setGameMode] = useState<GameMode>("bo1");
   const [selected, setSelected] = useState<Selected | null>(null);
@@ -56,10 +60,10 @@ export function MatchupMatrix({ standings, stats, matches }: Props) {
     return m;
   }, [overall]);
 
-  const axes = useMemo(
-    () => [...stats].sort((a, b) => b.deckCount - a.deckCount).map((s) => s.archetype),
-    [stats]
-  );
+  // Mismo orden por defecto que la tabla de Metagame (% meta, empate por
+  // winrate/victorias/derrotas) — usando `overall`, que respeta el BO1/BO3
+  // seleccionado aqui mismo.
+  const axes = useMemo(() => sortArchetypeStatsDefault(overall).map((s) => s.archetype), [overall]);
   const rowAxes = focusedRow ? [focusedRow] : axes;
 
   function cellAt(row: string, col: string) {

@@ -52,7 +52,9 @@ export function CardTable({ cards }: Props) {
     });
   }, [cards, search, typeFilters, colorFilters]);
 
-  const { sorted, sortKey, sortDir, toggle } = useSort(filtered, "decks", "desc");
+  const { sorted, sortKey, sortDir, toggle } = useSort(filtered, "pctOfDecks", "desc", (k) =>
+    k === "pctOfDecks" ? [{ key: "totalCopies", dir: "desc" }] : undefined
+  );
 
   return (
     <div>

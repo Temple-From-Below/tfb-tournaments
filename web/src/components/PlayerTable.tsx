@@ -26,7 +26,14 @@ export function PlayerTable({ standings, matches, tournaments }: Props) {
     () => computePlayerStats(standings, matches, tournaments, gameMode),
     [standings, matches, tournaments, gameMode]
   );
-  const { sorted, sortKey, sortDir, toggle } = useSort(players, "points", "desc");
+  const { sorted, sortKey, sortDir, toggle } = useSort(players, "points", "desc", (k) =>
+    k === "points"
+      ? [
+          { key: "winratePct", dir: "desc" },
+          { key: "avgSpiciness", dir: "desc" },
+        ]
+      : undefined
+  );
   const [expanded, setExpanded] = useState<string | null>(null);
 
   return (

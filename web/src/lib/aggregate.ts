@@ -82,6 +82,21 @@ export function computeArchetypeStats(
   });
 }
 
+/** Orden por defecto de arquetipos, compartido entre la tabla de Metagame
+ * y los ejes de la matriz de enfrentamientos (para que ambos muestren el
+ * mismo orden): % de meta descendente, empate por winrate descendente,
+ * empate por victorias descendente, empate por derrotas ascendente. */
+export function sortArchetypeStatsDefault(stats: ArchetypeStat[]): ArchetypeStat[] {
+  return [...stats].sort((a, b) => {
+    if (b.metaSharePct !== a.metaSharePct) return b.metaSharePct - a.metaSharePct;
+    const aw = a.winratePct ?? -1;
+    const bw = b.winratePct ?? -1;
+    if (bw !== aw) return bw - aw;
+    if (b.wins !== a.wins) return b.wins - a.wins;
+    return a.losses - b.losses;
+  });
+}
+
 /** Ranking global de arquetipos (sin filtros) por numero de mazos - se usa
  * para fijar el color de cada arquetipo con independencia de los filtros
  * activos ("el color sigue a la entidad, nunca a su rango"). */
