@@ -515,12 +515,15 @@ tr:hover .card-thumb {
   padding: 10px 14px;
 }
 .player-detail-row .entry {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 6px;
-  margin: 3px 10px 3px 0;
+  padding: 4px 0;
   font-size: 12.5px;
   color: var(--text-secondary);
+}
+.player-detail-row .entry + .entry {
+  border-top: 1px solid var(--gridline);
 }
 
 .footer-note {
