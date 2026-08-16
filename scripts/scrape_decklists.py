@@ -112,6 +112,7 @@ def main():
                 "player_name_mtgdecks": d["player_name_mtgdecks"],
                 "archetype": d["archetype"],
                 "deck_title": d["deck_title"],
+                "list_view_url": d["list_view_url"],
             }
             print(f"[{i + 1}/{len(decks)}] {meta['tournament_name']} #{meta['rank']} - {meta['deck_title']} ({d['list_view_url']})")
             with new_page(browser) as page:

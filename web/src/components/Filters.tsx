@@ -15,28 +15,31 @@ export function Filters({ tournaments, selected, onChange }: Props) {
   }
 
   const allSelected = selected.size === tournaments.length;
+  const sorted = [...tournaments].sort((a, b) => a.date.localeCompare(b.date));
 
   return (
-    <div className="filters-row" role="group" aria-label="Filtro por torneo">
+    <div className="filters-block" role="group" aria-label="Filtro por torneo">
       <span className="filters-label">Torneos</span>
-      {tournaments.map((t) => (
+      <div className="filters-row">
+        {sorted.map((t) => (
+          <button
+            key={t.tournament_name}
+            type="button"
+            className={`chip${selected.has(t.tournament_name) ? " active" : ""}`}
+            onClick={() => toggle(t.tournament_name)}
+            title={t.date}
+          >
+            {t.tournament_name}
+          </button>
+        ))}
         <button
-          key={t.tournament_name}
           type="button"
-          className={`chip${selected.has(t.tournament_name) ? " active" : ""}`}
-          onClick={() => toggle(t.tournament_name)}
-          title={t.date}
+          className="chip ghost"
+          onClick={() => onChange(allSelected ? new Set() : new Set(tournaments.map((t) => t.tournament_name)))}
         >
-          {t.tournament_name.replace("Mensual ", "")}
+          {allSelected ? "Ninguno" : "Todos"}
         </button>
-      ))}
-      <button
-        type="button"
-        className="chip ghost"
-        onClick={() => onChange(allSelected ? new Set() : new Set(tournaments.map((t) => t.tournament_name)))}
-      >
-        {allSelected ? "Ninguno" : "Todos"}
-      </button>
+      </div>
     </div>
   );
 }

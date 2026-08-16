@@ -1,7 +1,7 @@
 import type { Tournament } from "../types";
 
 export function TournamentLinks({ tournaments }: { tournaments: Tournament[] }) {
-  const sorted = [...tournaments].sort((a, b) => b.date.localeCompare(a.date));
+  const sorted = [...tournaments].sort((a, b) => a.date.localeCompare(b.date));
   return (
     <div className="tournament-links">
       {sorted.map((t) => (

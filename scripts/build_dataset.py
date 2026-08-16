@@ -107,10 +107,11 @@ def main():
     # puso el jugador como "arquetipo" (para que cuente en metagame/matriz
     # de enfrentamientos en vez de quedar fuera) y spiciness=100 (es, por
     # definicion, el mazo mas "raro"/unico posible: no encaja en ningun
-    # arquetipo conocido).
+    # arquetipo conocido). Ademas, cualquier deck con spiciness vacio (aunque
+    # tenga arquetipo asignado a mano) tambien se pone a 100 por el mismo motivo.
     missing_archetype = st["archetype"].isna()
     st.loc[missing_archetype, "archetype"] = st.loc[missing_archetype, "deck_title"]
-    st.loc[missing_archetype, "spiciness"] = 100
+    st.loc[missing_archetype | st["spiciness"].isna(), "spiciness"] = 100
 
     st_cols = [
         "tournament_name", "date", "format", "rank", "name", "canonical_player_name",

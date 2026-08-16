@@ -136,11 +136,7 @@ a {
 }
 
 /* ---------- filtros ---------- */
-.filters-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
+.filters-block {
   margin-bottom: 20px;
   padding: 10px 12px;
   background: var(--surface-1);
@@ -148,10 +144,18 @@ a {
   border-radius: 10px;
 }
 
-.filters-row .filters-label {
+.filters-block .filters-label {
+  display: block;
   font-size: 12px;
   color: var(--text-muted);
-  margin-right: 4px;
+  margin-bottom: 8px;
+}
+
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
 }
 
 .chip {

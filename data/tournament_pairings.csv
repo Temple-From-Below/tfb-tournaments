@@ -1,138 +1,389 @@
-﻿tournament_name,round,table,player_1,points_player_1,player_2,points_player_2,match_results,player_1_wins,player_2_wins,player_winner,player_name_winner,is_draw
-Mensual Abril 2026,1,1,Teba,0,Paco,0,1 - 2,1,2,2,Paco,FALSE
-Mensual Abril 2026,1,2,Alan,0,Alfieri,0,2 - 0,2,0,1,Alan,FALSE
-Mensual Abril 2026,1,3,Jorge,0,Hugo,0,0 - 1,0,1,2,Hugo,FALSE
-Mensual Abril 2026,1,4,Sergio,0,Dani B,0,0 - 2,0,2,2,Dani B,FALSE
-Mensual Abril 2026,1,5,Daniel J,0,Nilo,0,2 - 1,2,1,1,Daniel J,FALSE
-Mensual Abril 2026,1,6,Miquel,0,Ruben I,0,0 - 2,0,2,2,Ruben I,FALSE
-Mensual Abril 2026,1,7,Hector,0,Adrian,0,2 - 0,2,0,1,Hector,FALSE
-Mensual Abril 2026,1,8,Aitor,0,David F,0,2 - 0,2,0,1,Aitor,FALSE
-Mensual Abril 2026,2,1,Aitor,3,Daniel J,3,0 - 2,0,2,2,Daniel J,FALSE
-Mensual Abril 2026,2,2,Hector,3,Dani B,3,1 - 2,1,2,2,Dani B,FALSE
-Mensual Abril 2026,2,3,Paco,3,Hugo,3,2 - 0,2,0,1,Paco,FALSE
-Mensual Abril 2026,2,4,Ruben I,3,Alan,3,2 - 0,2,0,1,Ruben I,FALSE
-Mensual Abril 2026,2,5,Sergio,0,Nilo,0,1 - 2,1,2,2,Nilo,FALSE
-Mensual Abril 2026,2,6,Miquel,0,Jorge,0,0 - 1,0,1,2,Jorge,FALSE
-Mensual Abril 2026,2,7,David F,0,Teba,0,1 - 0,1,0,1,David F,FALSE
-Mensual Abril 2026,2,8,Alfieri,0,Adrian,0,0 - 2,0,2,2,Adrian,FALSE
-Mensual Abril 2026,3,1,Daniel J,6,Paco,6,0 - 2,0,2,2,Paco,FALSE
-Mensual Abril 2026,3,2,Dani B,6,Ruben I,6,2 - 0,2,0,1,Dani B,FALSE
-Mensual Abril 2026,3,3,Nilo,3,Hugo,3,2 - 1,2,1,1,Nilo,FALSE
-Mensual Abril 2026,3,4,David F,3,Alan,3,0 - 1,0,1,2,Alan,FALSE
-Mensual Abril 2026,3,5,Aitor,3,Hector,3,2 - 0,2,0,1,Aitor,FALSE
-Mensual Abril 2026,3,6,Jorge,3,Adrian,3,1 - 0,1,0,1,Jorge,FALSE
-Mensual Abril 2026,3,7,Miquel,0,Sergio,0,0 - 2,0,2,2,Sergio,FALSE
-Mensual Abril 2026,3,8,Alfieri,0,Teba,0,0 - 2,0,2,2,Teba,FALSE
-Mensual Abril 2026,4,1,Dani B,9,Paco,9,1 - 1,1,1,,,TRUE
-Mensual Abril 2026,4,2,Daniel J,6,Ruben I,6,2 - 0,2,0,1,Daniel J,FALSE
-Mensual Abril 2026,4,3,Aitor,6,Alan,6,2 - 0,2,0,1,Aitor,FALSE
-Mensual Abril 2026,4,4,Nilo,6,Jorge,6,2 - 0,2,0,1,Nilo,FALSE
-Mensual Abril 2026,4,5,Hugo,3,Hector,3,2 - 1,2,1,1,Hugo,FALSE
-Mensual Abril 2026,4,6,Sergio,3,Teba,3,2 - 0,2,0,1,Sergio,FALSE
-Mensual Abril 2026,4,7,David F,3,Adrian,3,2 - 0,2,0,1,David F,FALSE
-Mensual Abril 2026,4,8,Miquel,0,Alfieri,0,2 - 1,2,1,1,Miquel,FALSE
-Mensual Mayo 2026,1,1,Artero,0,Ruiz,0,0 - 2,0,2,2,Ruiz,FALSE
-Mensual Mayo 2026,1,2,Adrian,0,Alan,0,2 - 1,2,1,1,Adrian,FALSE
-Mensual Mayo 2026,1,3,Nieto,0,Chema,0,1 - 2,1,2,2,Chema,FALSE
-Mensual Mayo 2026,1,4,Sergio,0,Aitor,0,2 - 1,2,1,1,Sergio,FALSE
-Mensual Mayo 2026,1,5,Figols,0,Dani Bagan,0,1 - 1,1,1,,,TRUE
-Mensual Mayo 2026,1,6,Ruben,0,Teba,0,2 - 0,2,0,1,Ruben,FALSE
-Mensual Mayo 2026,1,7,Jaime,0,Hugo,0,0 - 2,0,2,2,Hugo,FALSE
-Mensual Mayo 2026,1,8,Paco,0,BYE,0,2 - 0,2,0,1,Paco,FALSE
-Mensual Mayo 2026,2,1,Paco,3,Adrian,3,2 - 0,2,0,1,Paco,FALSE
-Mensual Mayo 2026,2,2,Ruiz,3,Sergio,3,1 - 2,1,2,2,Sergio,FALSE
-Mensual Mayo 2026,2,3,Ruben,3,Chema,3,2 - 1,2,1,1,Ruben,FALSE
-Mensual Mayo 2026,2,4,Hugo,3,Figols,1,2 - 1,2,1,1,Hugo,FALSE
-Mensual Mayo 2026,2,5,Dani Bagan,1,Teba,0,2 - 0,2,0,1,Dani Bagan,FALSE
-Mensual Mayo 2026,2,6,Nieto,0,Alan,0,1 - 2,1,2,2,Alan,FALSE
-Mensual Mayo 2026,2,7,Aitor,0,Artero,0,2 - 0,2,0,1,Aitor,FALSE
-Mensual Mayo 2026,2,8,Jaime,0,BYE,0,2 - 0,2,0,1,Jaime,FALSE
-Mensual Mayo 2026,3,1,Sergio,6,Hugo,6,2 - 1,2,1,1,Sergio,FALSE
-Mensual Mayo 2026,3,2,Paco,6,Ruben,6,2 - 0,2,0,1,Paco,FALSE
-Mensual Mayo 2026,3,3,Dani Bagan,4,Aitor,3,2 - 1,2,1,1,Dani Bagan,FALSE
-Mensual Mayo 2026,3,4,Adrian,3,Ruiz,3,1 - 2,1,2,2,Ruiz,FALSE
-Mensual Mayo 2026,3,5,Jaime,3,Chema,3,2 - 1,2,1,1,Jaime,FALSE
-Mensual Mayo 2026,3,6,Alan,3,Figols,1,1 - 2,1,2,2,Figols,FALSE
-Mensual Mayo 2026,3,7,Teba,0,Nieto,0,2 - 0,2,0,1,Teba,FALSE
-Mensual Mayo 2026,3,8,Artero,0,BYE,0,2 - 0,2,0,1,Artero,FALSE
-Mensual Mayo 2026,4,1,Sergio,9,Paco,9,2 - 1,2,1,1,Sergio,FALSE
-Mensual Mayo 2026,4,2,Dani Bagan,7,Hugo,6,2 - 0,2,0,1,Dani Bagan,FALSE
-Mensual Mayo 2026,4,3,Ruiz,6,Ruben,6,0 - 2,0,2,2,Ruben,FALSE
-Mensual Mayo 2026,4,4,Jaime,6,Figols,4,0 - 2,0,2,2,Figols,FALSE
-Mensual Mayo 2026,4,5,Aitor,3,Adrian,3,2 - 1,2,1,1,Aitor,FALSE
-Mensual Mayo 2026,4,6,Teba,3,Chema,3,0 - 2,0,2,2,Chema,FALSE
-Mensual Mayo 2026,4,7,Artero,3,Alan,3,0 - 2,0,2,2,Alan,FALSE
-Mensual Mayo 2026,4,8,Nieto,0,BYE,0,2 - 0,2,0,1,Nieto,FALSE
-Mensual Junio 2026,1,1,Teba,0,Artero,0,0 - 2,0,2,2,Artero,FALSE
-Mensual Junio 2026,1,2,Aitor,0,Figols no,0,2 - 0,2,0,1,Aitor,FALSE
-Mensual Junio 2026,1,3,Giacomo,0,Sergio,0,2 - 1,2,1,1,Giacomo,FALSE
-Mensual Junio 2026,1,4,Pat,0,alejandro reguera,0,2 - 0,2,0,1,Pat,FALSE
-Mensual Junio 2026,1,5,Borja,0,Hugo,0,1 - 2,1,2,2,Hugo,FALSE
-Mensual Junio 2026,1,6,Ferran,0,Xelu,0,2 - 1,2,1,1,Ferran,FALSE
-Mensual Junio 2026,1,7,Daniel J,0,vicente bernat,0,0 - 2,0,2,2,vicente bernat,FALSE
-Mensual Junio 2026,1,8,Alan,0,Jaime,0,2 - 1,2,1,1,Alan,FALSE
-Mensual Junio 2026,1,9,JuanMa,0,Poxolo,0,0 - 2,0,2,2,Poxolo,FALSE
-Mensual Junio 2026,2,1,Giacomo,3,Pat,3,0 - 2,0,2,2,Pat,FALSE
-Mensual Junio 2026,2,2,Aitor,3,Ferran,3,2 - 0,2,0,1,Aitor,FALSE
-Mensual Junio 2026,2,3,Hugo,3,Artero,3,2 - 0,2,0,1,Hugo,FALSE
-Mensual Junio 2026,2,4,Alan,3,Poxolo,3,1 - 1,1,1,,,TRUE
-Mensual Junio 2026,2,5,vicente bernat,3,Xelu,0,0 - 2,0,2,2,Xelu,FALSE
-Mensual Junio 2026,2,6,alejandro reguera,0,Sergio,0,0 - 2,0,2,2,Sergio,FALSE
-Mensual Junio 2026,2,7,Jaime,0,Figols no,0,2 - 0,2,0,1,Jaime,FALSE
-Mensual Junio 2026,2,8,JuanMa,0,Daniel J,0,0 - 2,0,2,2,Daniel J,FALSE
-Mensual Junio 2026,2,9,Borja,0,Teba,0,2 - 1,2,1,1,Borja,FALSE
-Mensual Junio 2026,3,1,Aitor,6,Pat,6,1 - 0,1,0,1,Aitor,FALSE
-Mensual Junio 2026,3,2,Hugo,6,Alan,4,2 - 1,2,1,1,Hugo,FALSE
-Mensual Junio 2026,3,3,Poxolo,4,Sergio,3,0 - 2,0,2,2,Sergio,FALSE
-Mensual Junio 2026,3,4,Daniel J,3,Xelu,3,0 - 2,0,2,2,Xelu,FALSE
-Mensual Junio 2026,3,5,vicente bernat,3,Borja,3,2 - 0,2,0,1,vicente bernat,FALSE
-Mensual Junio 2026,3,6,Jaime,3,Ferran,3,0 - 2,0,2,2,Ferran,FALSE
-Mensual Junio 2026,3,7,Artero,3,Giacomo,3,2 - 0,2,0,1,Artero,FALSE
-Mensual Junio 2026,3,8,alejandro reguera,0,JuanMa,0,2 - 0,2,0,1,alejandro reguera,FALSE
-Mensual Junio 2026,3,9,Teba,0,Figols no,0,2 - 0,2,0,1,Teba,FALSE
-Mensual Junio 2026,4,1,Aitor,9,Hugo,9,0 - 2,0,2,2,Hugo,FALSE
-Mensual Junio 2026,4,2,Ferran,6,Artero,6,2 - 1,2,1,1,Ferran,FALSE
-Mensual Junio 2026,4,3,Sergio,6,Xelu,6,2 - 0,2,0,1,Sergio,FALSE
-Mensual Junio 2026,4,4,Pat,6,vicente bernat,6,0 - 2,0,2,2,vicente bernat,FALSE
-Mensual Junio 2026,4,5,Poxolo,4,Teba,3,2 - 0,2,0,1,Poxolo,FALSE
-Mensual Junio 2026,4,6,Alan,4,alejandro reguera,3,2 - 0,2,0,1,Alan,FALSE
-Mensual Junio 2026,4,7,Borja,3,Jaime,3,2 - 0,2,0,1,Borja,FALSE
-Mensual Junio 2026,4,8,Daniel J,3,Giacomo,3,1 - 2,1,2,2,Giacomo,FALSE
-Mensual Junio 2026,4,9,Figols no,0,JuanMa,0,0 - 2,0,2,2,JuanMa,FALSE
-Mensual Junio 2026,5,1,Hugo,12,Ferran,9,0 - 2,0,2,2,Ferran,FALSE
-Mensual Junio 2026,5,2,Aitor,9,Sergio,9,2 - 1,2,1,1,Aitor,FALSE
-Mensual Junio 2026,5,3,vicente bernat,9,Alan,7,0 - 2,0,2,2,Alan,FALSE
-Mensual Junio 2026,5,4,Poxolo,7,Xelu,6,0 - 2,0,2,2,Xelu,FALSE
-Mensual Junio 2026,5,5,Artero,6,Borja,6,0 - 2,0,2,2,Borja,FALSE
-Mensual Junio 2026,5,6,Pat,6,Jaime,3,0 - 2,0,2,2,Jaime,FALSE
-Mensual Junio 2026,5,7,Giacomo,6,alejandro reguera,3,2 - 1,2,1,1,Giacomo,FALSE
-Mensual Junio 2026,5,8,Teba,3,JuanMa,3,2 - 1,2,1,1,Teba,FALSE
-Mensual Junio 2026,5,9,Daniel J,3,Figols no,0,0 - 2,0,2,2,Figols no,FALSE
-Mensual Julio 2026,1,1,Adrian,0,Jaime,0,2 - 1,2,1,1,Adrian,FALSE
-Mensual Julio 2026,1,2,Alex,0,Euge,0,2 - 0,2,0,1,Alex,FALSE
-Mensual Julio 2026,1,3,Poxo,0,D. Bagan,0,2 - 0,2,0,1,Poxo,FALSE
-Mensual Julio 2026,1,4,Nieto,0,Ferran,0,2 - 1,2,1,1,Nieto,FALSE
-Mensual Julio 2026,1,5,Teba,0,David F,0,0 - 2,0,2,2,David F,FALSE
-Mensual Julio 2026,1,6,Aitor,0,Nilo,0,0 - 2,0,2,2,Nilo,FALSE
-Mensual Julio 2026,1,7,Alan,0,BYE,0,2 - 0,2,0,1,Alan,FALSE
-Mensual Julio 2026,2,1,Adrian,3,Nieto,3,0 - 2,0,2,2,Nieto,FALSE
-Mensual Julio 2026,2,2,Alan,3,David F,3,1 - 2,1,2,2,David F,FALSE
-Mensual Julio 2026,2,3,Poxo,3,Alex,3,1 - 2,1,2,2,Alex,FALSE
-Mensual Julio 2026,2,4,Nilo,3,Euge,0,2 - 1,2,1,1,Nilo,FALSE
-Mensual Julio 2026,2,5,Teba,0,Ferran,0,1 - 2,1,2,2,Ferran,FALSE
-Mensual Julio 2026,2,6,D. Bagan,0,Aitor,0,2 - 0,2,0,1,D. Bagan,FALSE
-Mensual Julio 2026,2,7,Jaime,0,BYE,0,2 - 0,2,0,1,Jaime,FALSE
-Mensual Julio 2026,3,1,Nieto,6,David F,6,2 - 0,2,0,1,Nieto,FALSE
-Mensual Julio 2026,3,2,Alex,6,Nilo,6,2 - 1,2,1,1,Alex,FALSE
-Mensual Julio 2026,3,3,D. Bagan,3,Jaime,3,2 - 1,2,1,1,D. Bagan,FALSE
-Mensual Julio 2026,3,4,Adrian,3,Poxo,3,0 - 2,0,2,2,Poxo,FALSE
-Mensual Julio 2026,3,5,Alan,3,Ferran,3,0 - 2,0,2,2,Ferran,FALSE
-Mensual Julio 2026,3,6,Teba,0,Euge,0,0 - 2,0,2,2,Euge,FALSE
-Mensual Julio 2026,3,7,Aitor,0,BYE,0,2 - 0,2,0,1,Aitor,FALSE
-Mensual Julio 2026,4,1,Nieto,9,Alex,9,2 - 1,2,1,1,Nieto,FALSE
-Mensual Julio 2026,4,2,Poxo,6,Ferran,6,0 - 2,0,2,2,Ferran,FALSE
-Mensual Julio 2026,4,3,Nilo,6,David F,6,2 - 1,2,1,1,Nilo,FALSE
-Mensual Julio 2026,4,4,D. Bagan,6,Euge,3,2 - 1,2,1,1,D. Bagan,FALSE
-Mensual Julio 2026,4,5,Adrian,3,Alan,3,0 - 2,0,2,2,Alan,FALSE
-Mensual Julio 2026,4,6,Aitor,3,Jaime,3,2 - 1,2,1,1,Aitor,FALSE
-Mensual Julio 2026,4,7,Teba,0,BYE,0,2 - 0,2,0,1,Teba,FALSE
+tournament_name,round,table,player_1,points_player_1,player_2,points_player_2,match_results,player_1_wins,player_2_wins,player_winner,player_name_winner,is_draw
+Mensual Abril 2026,1,1,Teba,0,Paco,0,1 - 2,1,2,2.0,Paco,False
+Mensual Abril 2026,1,2,Alan,0,Alfieri,0,2 - 0,2,0,1.0,Alan,False
+Mensual Abril 2026,1,3,Jorge,0,Hugo,0,0 - 1,0,1,2.0,Hugo,False
+Mensual Abril 2026,1,4,Sergio,0,Dani B,0,0 - 2,0,2,2.0,Dani B,False
+Mensual Abril 2026,1,5,Daniel J,0,Nilo,0,2 - 1,2,1,1.0,Daniel J,False
+Mensual Abril 2026,1,6,Miquel,0,Ruben I,0,0 - 2,0,2,2.0,Ruben I,False
+Mensual Abril 2026,1,7,Hector,0,Adrian,0,2 - 0,2,0,1.0,Hector,False
+Mensual Abril 2026,1,8,Aitor,0,David F,0,2 - 0,2,0,1.0,Aitor,False
+Mensual Abril 2026,2,1,Aitor,3,Daniel J,3,0 - 2,0,2,2.0,Daniel J,False
+Mensual Abril 2026,2,2,Hector,3,Dani B,3,1 - 2,1,2,2.0,Dani B,False
+Mensual Abril 2026,2,3,Paco,3,Hugo,3,2 - 0,2,0,1.0,Paco,False
+Mensual Abril 2026,2,4,Ruben I,3,Alan,3,2 - 0,2,0,1.0,Ruben I,False
+Mensual Abril 2026,2,5,Sergio,0,Nilo,0,1 - 2,1,2,2.0,Nilo,False
+Mensual Abril 2026,2,6,Miquel,0,Jorge,0,0 - 1,0,1,2.0,Jorge,False
+Mensual Abril 2026,2,7,David F,0,Teba,0,1 - 0,1,0,1.0,David F,False
+Mensual Abril 2026,2,8,Alfieri,0,Adrian,0,0 - 2,0,2,2.0,Adrian,False
+Mensual Abril 2026,3,1,Daniel J,6,Paco,6,0 - 2,0,2,2.0,Paco,False
+Mensual Abril 2026,3,2,Dani B,6,Ruben I,6,2 - 0,2,0,1.0,Dani B,False
+Mensual Abril 2026,3,3,Nilo,3,Hugo,3,2 - 1,2,1,1.0,Nilo,False
+Mensual Abril 2026,3,4,David F,3,Alan,3,0 - 1,0,1,2.0,Alan,False
+Mensual Abril 2026,3,5,Aitor,3,Hector,3,2 - 0,2,0,1.0,Aitor,False
+Mensual Abril 2026,3,6,Jorge,3,Adrian,3,1 - 0,1,0,1.0,Jorge,False
+Mensual Abril 2026,3,7,Miquel,0,Sergio,0,0 - 2,0,2,2.0,Sergio,False
+Mensual Abril 2026,3,8,Alfieri,0,Teba,0,0 - 2,0,2,2.0,Teba,False
+Mensual Abril 2026,4,1,Dani B,9,Paco,9,1 - 1,1,1,,,True
+Mensual Abril 2026,4,2,Daniel J,6,Ruben I,6,2 - 0,2,0,1.0,Daniel J,False
+Mensual Abril 2026,4,3,Aitor,6,Alan,6,2 - 0,2,0,1.0,Aitor,False
+Mensual Abril 2026,4,4,Nilo,6,Jorge,6,2 - 0,2,0,1.0,Nilo,False
+Mensual Abril 2026,4,5,Hugo,3,Hector,3,2 - 1,2,1,1.0,Hugo,False
+Mensual Abril 2026,4,6,Sergio,3,Teba,3,2 - 0,2,0,1.0,Sergio,False
+Mensual Abril 2026,4,7,David F,3,Adrian,3,2 - 0,2,0,1.0,David F,False
+Mensual Abril 2026,4,8,Miquel,0,Alfieri,0,2 - 1,2,1,1.0,Miquel,False
+Mensual Mayo 2026,1,1,Artero,0,Ruiz,0,0 - 2,0,2,2.0,Ruiz,False
+Mensual Mayo 2026,1,2,Adrian,0,Alan,0,2 - 1,2,1,1.0,Adrian,False
+Mensual Mayo 2026,1,3,Nieto,0,Chema,0,1 - 2,1,2,2.0,Chema,False
+Mensual Mayo 2026,1,4,Sergio,0,Aitor,0,2 - 1,2,1,1.0,Sergio,False
+Mensual Mayo 2026,1,5,Figols,0,Dani Bagan,0,1 - 1,1,1,,,True
+Mensual Mayo 2026,1,6,Ruben,0,Teba,0,2 - 0,2,0,1.0,Ruben,False
+Mensual Mayo 2026,1,7,Jaime,0,Hugo,0,0 - 2,0,2,2.0,Hugo,False
+Mensual Mayo 2026,1,8,Paco,0,BYE,0,2 - 0,2,0,1.0,Paco,False
+Mensual Mayo 2026,2,1,Paco,3,Adrian,3,2 - 0,2,0,1.0,Paco,False
+Mensual Mayo 2026,2,2,Ruiz,3,Sergio,3,1 - 2,1,2,2.0,Sergio,False
+Mensual Mayo 2026,2,3,Ruben,3,Chema,3,2 - 1,2,1,1.0,Ruben,False
+Mensual Mayo 2026,2,4,Hugo,3,Figols,1,2 - 1,2,1,1.0,Hugo,False
+Mensual Mayo 2026,2,5,Dani Bagan,1,Teba,0,2 - 0,2,0,1.0,Dani Bagan,False
+Mensual Mayo 2026,2,6,Nieto,0,Alan,0,1 - 2,1,2,2.0,Alan,False
+Mensual Mayo 2026,2,7,Aitor,0,Artero,0,2 - 0,2,0,1.0,Aitor,False
+Mensual Mayo 2026,2,8,Jaime,0,BYE,0,2 - 0,2,0,1.0,Jaime,False
+Mensual Mayo 2026,3,1,Sergio,6,Hugo,6,2 - 1,2,1,1.0,Sergio,False
+Mensual Mayo 2026,3,2,Paco,6,Ruben,6,2 - 0,2,0,1.0,Paco,False
+Mensual Mayo 2026,3,3,Dani Bagan,4,Aitor,3,2 - 1,2,1,1.0,Dani Bagan,False
+Mensual Mayo 2026,3,4,Adrian,3,Ruiz,3,1 - 2,1,2,2.0,Ruiz,False
+Mensual Mayo 2026,3,5,Jaime,3,Chema,3,2 - 1,2,1,1.0,Jaime,False
+Mensual Mayo 2026,3,6,Alan,3,Figols,1,1 - 2,1,2,2.0,Figols,False
+Mensual Mayo 2026,3,7,Teba,0,Nieto,0,2 - 0,2,0,1.0,Teba,False
+Mensual Mayo 2026,3,8,Artero,0,BYE,0,2 - 0,2,0,1.0,Artero,False
+Mensual Mayo 2026,4,1,Sergio,9,Paco,9,2 - 1,2,1,1.0,Sergio,False
+Mensual Mayo 2026,4,2,Dani Bagan,7,Hugo,6,2 - 0,2,0,1.0,Dani Bagan,False
+Mensual Mayo 2026,4,3,Ruiz,6,Ruben,6,0 - 2,0,2,2.0,Ruben,False
+Mensual Mayo 2026,4,4,Jaime,6,Figols,4,0 - 2,0,2,2.0,Figols,False
+Mensual Mayo 2026,4,5,Aitor,3,Adrian,3,2 - 1,2,1,1.0,Aitor,False
+Mensual Mayo 2026,4,6,Teba,3,Chema,3,0 - 2,0,2,2.0,Chema,False
+Mensual Mayo 2026,4,7,Artero,3,Alan,3,0 - 2,0,2,2.0,Alan,False
+Mensual Mayo 2026,4,8,Nieto,0,BYE,0,2 - 0,2,0,1.0,Nieto,False
+Mensual Junio 2026,1,1,Teba,0,Artero,0,0 - 2,0,2,2.0,Artero,False
+Mensual Junio 2026,1,2,Aitor,0,Figols no,0,2 - 0,2,0,1.0,Aitor,False
+Mensual Junio 2026,1,3,Giacomo,0,Sergio,0,2 - 1,2,1,1.0,Giacomo,False
+Mensual Junio 2026,1,4,Pat,0,alejandro reguera,0,2 - 0,2,0,1.0,Pat,False
+Mensual Junio 2026,1,5,Borja,0,Hugo,0,1 - 2,1,2,2.0,Hugo,False
+Mensual Junio 2026,1,6,Ferran,0,Xelu,0,2 - 1,2,1,1.0,Ferran,False
+Mensual Junio 2026,1,7,Daniel J,0,vicente bernat,0,0 - 2,0,2,2.0,vicente bernat,False
+Mensual Junio 2026,1,8,Alan,0,Jaime,0,2 - 1,2,1,1.0,Alan,False
+Mensual Junio 2026,1,9,JuanMa,0,Poxolo,0,0 - 2,0,2,2.0,Poxolo,False
+Mensual Junio 2026,2,1,Giacomo,3,Pat,3,0 - 2,0,2,2.0,Pat,False
+Mensual Junio 2026,2,2,Aitor,3,Ferran,3,2 - 0,2,0,1.0,Aitor,False
+Mensual Junio 2026,2,3,Hugo,3,Artero,3,2 - 0,2,0,1.0,Hugo,False
+Mensual Junio 2026,2,4,Alan,3,Poxolo,3,1 - 1,1,1,,,True
+Mensual Junio 2026,2,5,vicente bernat,3,Xelu,0,0 - 2,0,2,2.0,Xelu,False
+Mensual Junio 2026,2,6,alejandro reguera,0,Sergio,0,0 - 2,0,2,2.0,Sergio,False
+Mensual Junio 2026,2,7,Jaime,0,Figols no,0,2 - 0,2,0,1.0,Jaime,False
+Mensual Junio 2026,2,8,JuanMa,0,Daniel J,0,0 - 2,0,2,2.0,Daniel J,False
+Mensual Junio 2026,2,9,Borja,0,Teba,0,2 - 1,2,1,1.0,Borja,False
+Mensual Junio 2026,3,1,Aitor,6,Pat,6,1 - 0,1,0,1.0,Aitor,False
+Mensual Junio 2026,3,2,Hugo,6,Alan,4,2 - 1,2,1,1.0,Hugo,False
+Mensual Junio 2026,3,3,Poxolo,4,Sergio,3,0 - 2,0,2,2.0,Sergio,False
+Mensual Junio 2026,3,4,Daniel J,3,Xelu,3,0 - 2,0,2,2.0,Xelu,False
+Mensual Junio 2026,3,5,vicente bernat,3,Borja,3,2 - 0,2,0,1.0,vicente bernat,False
+Mensual Junio 2026,3,6,Jaime,3,Ferran,3,0 - 2,0,2,2.0,Ferran,False
+Mensual Junio 2026,3,7,Artero,3,Giacomo,3,2 - 0,2,0,1.0,Artero,False
+Mensual Junio 2026,3,8,alejandro reguera,0,JuanMa,0,2 - 0,2,0,1.0,alejandro reguera,False
+Mensual Junio 2026,3,9,Teba,0,Figols no,0,2 - 0,2,0,1.0,Teba,False
+Mensual Junio 2026,4,1,Aitor,9,Hugo,9,0 - 2,0,2,2.0,Hugo,False
+Mensual Junio 2026,4,2,Ferran,6,Artero,6,2 - 1,2,1,1.0,Ferran,False
+Mensual Junio 2026,4,3,Sergio,6,Xelu,6,2 - 0,2,0,1.0,Sergio,False
+Mensual Junio 2026,4,4,Pat,6,vicente bernat,6,0 - 2,0,2,2.0,vicente bernat,False
+Mensual Junio 2026,4,5,Poxolo,4,Teba,3,2 - 0,2,0,1.0,Poxolo,False
+Mensual Junio 2026,4,6,Alan,4,alejandro reguera,3,2 - 0,2,0,1.0,Alan,False
+Mensual Junio 2026,4,7,Borja,3,Jaime,3,2 - 0,2,0,1.0,Borja,False
+Mensual Junio 2026,4,8,Daniel J,3,Giacomo,3,1 - 2,1,2,2.0,Giacomo,False
+Mensual Junio 2026,4,9,Figols no,0,JuanMa,0,0 - 2,0,2,2.0,JuanMa,False
+Mensual Junio 2026,5,1,Hugo,12,Ferran,9,0 - 2,0,2,2.0,Ferran,False
+Mensual Junio 2026,5,2,Aitor,9,Sergio,9,2 - 1,2,1,1.0,Aitor,False
+Mensual Junio 2026,5,3,vicente bernat,9,Alan,7,0 - 2,0,2,2.0,Alan,False
+Mensual Junio 2026,5,4,Poxolo,7,Xelu,6,0 - 2,0,2,2.0,Xelu,False
+Mensual Junio 2026,5,5,Artero,6,Borja,6,0 - 2,0,2,2.0,Borja,False
+Mensual Junio 2026,5,6,Pat,6,Jaime,3,0 - 2,0,2,2.0,Jaime,False
+Mensual Junio 2026,5,7,Giacomo,6,alejandro reguera,3,2 - 1,2,1,1.0,Giacomo,False
+Mensual Junio 2026,5,8,Teba,3,JuanMa,3,2 - 1,2,1,1.0,Teba,False
+Mensual Junio 2026,5,9,Daniel J,3,Figols no,0,0 - 2,0,2,2.0,Figols no,False
+Mensual Julio 2026,1,1,Adrian,0,Jaime,0,2 - 1,2,1,1.0,Adrian,False
+Mensual Julio 2026,1,2,Alex,0,Euge,0,2 - 0,2,0,1.0,Alex,False
+Mensual Julio 2026,1,3,Poxo,0,D. Bagan,0,2 - 0,2,0,1.0,Poxo,False
+Mensual Julio 2026,1,4,Nieto,0,Ferran,0,2 - 1,2,1,1.0,Nieto,False
+Mensual Julio 2026,1,5,Teba,0,David F,0,0 - 2,0,2,2.0,David F,False
+Mensual Julio 2026,1,6,Aitor,0,Nilo,0,0 - 2,0,2,2.0,Nilo,False
+Mensual Julio 2026,1,7,Alan,0,BYE,0,2 - 0,2,0,1.0,Alan,False
+Mensual Julio 2026,2,1,Adrian,3,Nieto,3,0 - 2,0,2,2.0,Nieto,False
+Mensual Julio 2026,2,2,Alan,3,David F,3,1 - 2,1,2,2.0,David F,False
+Mensual Julio 2026,2,3,Poxo,3,Alex,3,1 - 2,1,2,2.0,Alex,False
+Mensual Julio 2026,2,4,Nilo,3,Euge,0,2 - 1,2,1,1.0,Nilo,False
+Mensual Julio 2026,2,5,Teba,0,Ferran,0,1 - 2,1,2,2.0,Ferran,False
+Mensual Julio 2026,2,6,D. Bagan,0,Aitor,0,2 - 0,2,0,1.0,D. Bagan,False
+Mensual Julio 2026,2,7,Jaime,0,BYE,0,2 - 0,2,0,1.0,Jaime,False
+Mensual Julio 2026,3,1,Nieto,6,David F,6,2 - 0,2,0,1.0,Nieto,False
+Mensual Julio 2026,3,2,Alex,6,Nilo,6,2 - 1,2,1,1.0,Alex,False
+Mensual Julio 2026,3,3,D. Bagan,3,Jaime,3,2 - 1,2,1,1.0,D. Bagan,False
+Mensual Julio 2026,3,4,Adrian,3,Poxo,3,0 - 2,0,2,2.0,Poxo,False
+Mensual Julio 2026,3,5,Alan,3,Ferran,3,0 - 2,0,2,2.0,Ferran,False
+Mensual Julio 2026,3,6,Teba,0,Euge,0,0 - 2,0,2,2.0,Euge,False
+Mensual Julio 2026,3,7,Aitor,0,BYE,0,2 - 0,2,0,1.0,Aitor,False
+Mensual Julio 2026,4,1,Nieto,9,Alex,9,2 - 1,2,1,1.0,Nieto,False
+Mensual Julio 2026,4,2,Poxo,6,Ferran,6,0 - 2,0,2,2.0,Ferran,False
+Mensual Julio 2026,4,3,Nilo,6,David F,6,2 - 1,2,1,1.0,Nilo,False
+Mensual Julio 2026,4,4,D. Bagan,6,Euge,3,2 - 1,2,1,1.0,D. Bagan,False
+Mensual Julio 2026,4,5,Adrian,3,Alan,3,0 - 2,0,2,2.0,Alan,False
+Mensual Julio 2026,4,6,Aitor,3,Jaime,3,2 - 1,2,1,1.0,Aitor,False
+Mensual Julio 2026,4,7,Teba,0,BYE,0,2 - 0,2,0,1.0,Teba,False
+Jornada 1 Liga Pauper 2025,1,1,FERRAN,0,RUBEN MA.,0,2 - 1,2,1,1.0,FERRAN,False
+Jornada 1 Liga Pauper 2025,1,2,NIETO,0,SERGIO,0,2 - 0,2,0,1.0,NIETO,False
+Jornada 1 Liga Pauper 2025,1,3,FIGOLS,0,DAVID B.,0,2 - 0,2,0,1.0,FIGOLS,False
+Jornada 1 Liga Pauper 2025,1,4,Hugo,0,BORJA,0,2 - 0,2,0,1.0,Hugo,False
+Jornada 1 Liga Pauper 2025,1,5,TEBA,0,ARTERO,0,2 - 0,2,0,1.0,TEBA,False
+Jornada 1 Liga Pauper 2025,1,6,SERGIO RUBIO,0,MARC,0,0 - 2,0,2,2.0,MARC,False
+Jornada 1 Liga Pauper 2025,1,7,DANIEL J.,0,POXOLO,0,1 - 2,1,2,2.0,POXOLO,False
+Jornada 1 Liga Pauper 2025,1,8,HÉCTOR,0,JARON,0,0 - 2,0,2,2.0,JARON,False
+Jornada 1 Liga Pauper 2025,1,9,RAUL,0,BYE,0,2 - 0,2,0,1.0,RAUL,False
+Jornada 1 Liga Pauper 2025,2,1,FERRAN,3,MARC,3,0 - 2,0,2,2.0,MARC,False
+Jornada 1 Liga Pauper 2025,2,2,RAUL,3,JARON,3,1 - 2,1,2,2.0,JARON,False
+Jornada 1 Liga Pauper 2025,2,3,TEBA,3,FIGOLS,3,2 - 1,2,1,1.0,TEBA,False
+Jornada 1 Liga Pauper 2025,2,4,NIETO,3,POXOLO,3,0 - 2,0,2,2.0,POXOLO,False
+Jornada 1 Liga Pauper 2025,2,5,Hugo,3,RUBEN MA.,0,1 - 2,1,2,2.0,RUBEN MA.,False
+Jornada 1 Liga Pauper 2025,2,6,HÉCTOR,0,SERGIO,0,0 - 2,0,2,2.0,SERGIO,False
+Jornada 1 Liga Pauper 2025,2,7,ARTERO,0,DANIEL J.,0,0 - 2,0,2,2.0,DANIEL J.,False
+Jornada 1 Liga Pauper 2025,2,8,SERGIO RUBIO,0,DAVID B.,0,2 - 0,2,0,1.0,SERGIO RUBIO,False
+Jornada 1 Liga Pauper 2025,2,9,BORJA,0,BYE,0,2 - 0,2,0,1.0,BORJA,False
+Jornada 1 Liga Pauper 2025,3,1,TEBA,6,POXOLO,6,1 - 2,1,2,2.0,POXOLO,False
+Jornada 1 Liga Pauper 2025,3,2,MARC,6,JARON,6,1 - 2,1,2,2.0,JARON,False
+Jornada 1 Liga Pauper 2025,3,3,SERGIO,3,SERGIO RUBIO,3,0 - 2,0,2,2.0,SERGIO RUBIO,False
+Jornada 1 Liga Pauper 2025,3,4,RUBEN MA.,3,NIETO,3,2 - 1,2,1,1.0,RUBEN MA.,False
+Jornada 1 Liga Pauper 2025,3,5,FERRAN,3,DANIEL J.,3,1 - 2,1,2,2.0,DANIEL J.,False
+Jornada 1 Liga Pauper 2025,3,6,FIGOLS,3,RAUL,3,1 - 2,1,2,2.0,RAUL,False
+Jornada 1 Liga Pauper 2025,3,7,BORJA,3,ARTERO,0,2 - 0,2,0,1.0,BORJA,False
+Jornada 1 Liga Pauper 2025,3,8,Hugo,3,HÉCTOR,0,2 - 0,2,0,1.0,Hugo,False
+Jornada 1 Liga Pauper 2025,3,9,DAVID B.,0,BYE,0,2 - 0,2,0,1.0,DAVID B.,False
+Jornada 1 Liga Pauper 2025,4,1,POXOLO,9,JARON,9,1 - 1,1,1,,,True
+Jornada 1 Liga Pauper 2025,4,2,RAUL,6,MARC,6,0 - 2,0,2,2.0,MARC,False
+Jornada 1 Liga Pauper 2025,4,3,TEBA,6,DANIEL J.,6,2 - 1,2,1,1.0,TEBA,False
+Jornada 1 Liga Pauper 2025,4,4,Hugo,6,SERGIO RUBIO,6,1 - 2,1,2,2.0,SERGIO RUBIO,False
+Jornada 1 Liga Pauper 2025,4,5,BORJA,6,RUBEN MA.,6,0 - 2,0,2,2.0,RUBEN MA.,False
+Jornada 1 Liga Pauper 2025,4,6,NIETO,3,FERRAN,3,1 - 2,1,2,2.0,FERRAN,False
+Jornada 1 Liga Pauper 2025,4,7,FIGOLS,3,SERGIO,3,0 - 2,0,2,2.0,SERGIO,False
+Jornada 1 Liga Pauper 2025,4,8,DAVID B.,3,HÉCTOR,0,0 - 1,0,1,2.0,HÉCTOR,False
+Jornada 1 Liga Pauper 2025,4,9,ARTERO,0,BYE,0,2 - 0,2,0,1.0,ARTERO,False
+Jornada 2 Liga Pauper 2025,1,1,JARON,0,ARTERO,0,0 - 2,0,2,2.0,ARTERO,False
+Jornada 2 Liga Pauper 2025,1,2,SERGIO,0,RUBÉN A.,0,2 - 1,2,1,1.0,SERGIO,False
+Jornada 2 Liga Pauper 2025,1,3,PAT,0,DAVID P.,0,0 - 2,0,2,2.0,DAVID P.,False
+Jornada 2 Liga Pauper 2025,1,4,POXOLO,0,HUGO,0,1 - 2,1,2,2.0,HUGO,False
+Jornada 2 Liga Pauper 2025,1,5,VIVORILLA,0,DANI B.,0,2 - 0,2,0,1.0,VIVORILLA,False
+Jornada 2 Liga Pauper 2025,1,6,AITOR,0,MAKET,0,0 - 2,0,2,2.0,MAKET,False
+Jornada 2 Liga Pauper 2025,1,7,FERRAN,0,TEBA,0,2 - 0,2,0,1.0,FERRAN,False
+Jornada 2 Liga Pauper 2025,1,8,JUAN N,0,ROBERTO,0,2 - 0,2,0,1.0,JUAN N,False
+Jornada 2 Liga Pauper 2025,2,1,FERRAN,3,ARTERO,3,2 - 1,2,1,1.0,FERRAN,False
+Jornada 2 Liga Pauper 2025,2,2,VIVORILLA,3,HUGO,3,2 - 0,2,0,1.0,VIVORILLA,False
+Jornada 2 Liga Pauper 2025,2,3,MAKET,3,JUAN N,3,0 - 2,0,2,2.0,JUAN N,False
+Jornada 2 Liga Pauper 2025,2,4,SERGIO,3,DAVID P.,3,2 - 0,2,0,1.0,SERGIO,False
+Jornada 2 Liga Pauper 2025,2,5,DANI B.,0,JARON,0,2 - 0,2,0,1.0,DANI B.,False
+Jornada 2 Liga Pauper 2025,2,6,PAT,0,ROBERTO,0,0 - 2,0,2,2.0,ROBERTO,False
+Jornada 2 Liga Pauper 2025,2,7,RUBÉN A.,0,AITOR,0,0 - 2,0,2,2.0,AITOR,False
+Jornada 2 Liga Pauper 2025,2,8,TEBA,0,POXOLO,0,0 - 2,0,2,2.0,POXOLO,False
+Jornada 2 Liga Pauper 2025,3,1,JUAN N,6,FERRAN,6,2 - 0,2,0,1.0,JUAN N,False
+Jornada 2 Liga Pauper 2025,3,2,SERGIO,6,VIVORILLA,6,2 - 0,2,0,1.0,SERGIO,False
+Jornada 2 Liga Pauper 2025,3,3,AITOR,3,ARTERO,3,2 - 1,2,1,1.0,AITOR,False
+Jornada 2 Liga Pauper 2025,3,4,ROBERTO,3,MAKET,3,2 - 0,2,0,1.0,ROBERTO,False
+Jornada 2 Liga Pauper 2025,3,5,DANI B.,3,DAVID P.,3,2 - 0,2,0,1.0,DANI B.,False
+Jornada 2 Liga Pauper 2025,3,6,POXOLO,3,JARON,0,0 - 2,0,2,2.0,JARON,False
+Jornada 2 Liga Pauper 2025,3,7,HUGO,3,TEBA,0,2 - 0,2,0,1.0,HUGO,False
+Jornada 2 Liga Pauper 2025,3,8,PAT,0,RUBÉN A.,0,1 - 2,1,2,2.0,RUBÉN A.,False
+Jornada 2 Liga Pauper 2025,4,1,JUAN N,9,SERGIO,9,1 - 1,1,1,,,True
+Jornada 2 Liga Pauper 2025,4,2,VIVORILLA,6,ROBERTO,6,2 - 0,2,0,1.0,VIVORILLA,False
+Jornada 2 Liga Pauper 2025,4,3,FERRAN,6,DANI B.,6,1 - 2,1,2,2.0,DANI B.,False
+Jornada 2 Liga Pauper 2025,4,4,HUGO,6,AITOR,6,2 - 1,2,1,1.0,HUGO,False
+Jornada 2 Liga Pauper 2025,4,5,RUBÉN A.,3,DAVID P.,3,1 - 2,1,2,2.0,DAVID P.,False
+Jornada 2 Liga Pauper 2025,4,6,ARTERO,3,POXOLO,3,2 - 1,2,1,1.0,ARTERO,False
+Jornada 2 Liga Pauper 2025,4,7,JARON,3,TEBA,0,2 - 0,2,0,1.0,JARON,False
+Jornada 2 Liga Pauper 2025,4,8,PAT,0,BYE,0,2 - 0,2,0,1.0,PAT,False
+Jornada 3 Liga Pauper 2025,1,1,RUBEN MA.,0,ROCA,0,2 - 0,2,0,1.0,RUBEN MA.,False
+Jornada 3 Liga Pauper 2025,1,2,SERGIO,0,DAVID FIG.,0,2 - 1,2,1,1.0,SERGIO,False
+Jornada 3 Liga Pauper 2025,1,3,ARTERO,0,AITOR,0,0 - 2,0,2,2.0,AITOR,False
+Jornada 3 Liga Pauper 2025,1,4,BORJA,0,POXOLO,0,2 - 1,2,1,1.0,BORJA,False
+Jornada 3 Liga Pauper 2025,1,5,DANI B.,0,JARON,0,2 - 1,2,1,1.0,DANI B.,False
+Jornada 3 Liga Pauper 2025,1,6,FERRAN,0,BYE,0,2 - 0,2,0,1.0,FERRAN,False
+Jornada 3 Liga Pauper 2025,2,1,SERGIO,3,RUBEN MA.,3,0 - 2,0,2,2.0,RUBEN MA.,False
+Jornada 3 Liga Pauper 2025,2,2,BORJA,3,FERRAN,3,1 - 2,1,2,2.0,FERRAN,False
+Jornada 3 Liga Pauper 2025,2,3,AITOR,3,DANI B.,3,1 - 2,1,2,2.0,DANI B.,False
+Jornada 3 Liga Pauper 2025,2,4,ROCA,0,ARTERO,0,2 - 1,2,1,1.0,ROCA,False
+Jornada 3 Liga Pauper 2025,2,5,DAVID FIG.,0,POXOLO,0,2 - 1,2,1,1.0,DAVID FIG.,False
+Jornada 3 Liga Pauper 2025,2,6,JARON,0,BYE,0,2 - 0,2,0,1.0,JARON,False
+Jornada 3 Liga Pauper 2025,3,1,RUBEN MA.,6,FERRAN,6,2 - 0,2,0,1.0,RUBEN MA.,False
+Jornada 3 Liga Pauper 2025,3,2,DANI B.,6,DAVID FIG.,3,1 - 2,1,2,2.0,DAVID FIG.,False
+Jornada 3 Liga Pauper 2025,3,3,BORJA,3,JARON,3,2 - 0,2,0,1.0,BORJA,False
+Jornada 3 Liga Pauper 2025,3,4,AITOR,3,ROCA,3,2 - 0,2,0,1.0,AITOR,False
+Jornada 3 Liga Pauper 2025,3,5,SERGIO,3,ARTERO,0,1 - 2,1,2,2.0,ARTERO,False
+Jornada 3 Liga Pauper 2025,3,6,POXOLO,0,BYE,0,2 - 0,2,0,1.0,POXOLO,False
+Jornada 3 Liga Pauper 2025,4,1,RUBEN MA.,9,DANI B.,6,0 - 2,0,2,2.0,DANI B.,False
+Jornada 3 Liga Pauper 2025,4,2,FERRAN,6,AITOR,6,2 - 1,2,1,1.0,FERRAN,False
+Jornada 3 Liga Pauper 2025,4,3,BORJA,6,DAVID FIG.,6,2 - 1,2,1,1.0,BORJA,False
+Jornada 3 Liga Pauper 2025,4,4,SERGIO,3,ROCA,3,1 - 2,1,2,2.0,ROCA,False
+Jornada 3 Liga Pauper 2025,4,5,POXOLO,3,JARON,3,2 - 0,2,0,1.0,POXOLO,False
+Jornada 3 Liga Pauper 2025,4,6,ARTERO,3,BYE,0,2 - 0,2,0,1.0,ARTERO,False
+Jornada 4 Liga Pauper 2025,1,1,Aitor,0,Ruben,0,0 - 2,0,2,2.0,Ruben,False
+Jornada 4 Liga Pauper 2025,1,2,Alfieri,0,Hugo,0,0 - 2,0,2,2.0,Hugo,False
+Jornada 4 Liga Pauper 2025,1,3,Jaron,0,Davd M,0,2 - 1,2,1,1.0,Jaron,False
+Jornada 4 Liga Pauper 2025,1,4,Teba,0,Figols,0,1 - 2,1,2,2.0,Figols,False
+Jornada 4 Liga Pauper 2025,1,5,Roberto,0,Alan,0,1 - 2,1,2,2.0,Alan,False
+Jornada 4 Liga Pauper 2025,1,6,Llark,0,David B,0,2 - 1,2,1,1.0,Llark,False
+Jornada 4 Liga Pauper 2025,2,1,Llark,3,Hugo,3,2 - 1,2,1,1.0,Llark,False
+Jornada 4 Liga Pauper 2025,2,2,Ruben,3,Jaron,3,1 - 2,1,2,2.0,Jaron,False
+Jornada 4 Liga Pauper 2025,2,3,Figols,3,Alan,3,1 - 2,1,2,2.0,Alan,False
+Jornada 4 Liga Pauper 2025,2,4,Teba,0,Alfieri,0,2 - 1,2,1,1.0,Teba,False
+Jornada 4 Liga Pauper 2025,2,5,David B,0,Roberto,0,2 - 1,2,1,1.0,David B,False
+Jornada 4 Liga Pauper 2025,2,6,Aitor,0,Davd M,0,0 - 2,0,2,2.0,Davd M,False
+Jornada 4 Liga Pauper 2025,3,1,Jaron,6,Llark,6,1 - 2,1,2,2.0,Llark,False
+Jornada 4 Liga Pauper 2025,3,2,Alan,6,Davd M,3,1 - 2,1,2,2.0,Davd M,False
+Jornada 4 Liga Pauper 2025,3,3,Ruben,3,Teba,3,2 - 0,2,0,1.0,Ruben,False
+Jornada 4 Liga Pauper 2025,3,4,David B,3,Hugo,3,2 - 0,2,0,1.0,David B,False
+Jornada 4 Liga Pauper 2025,3,5,Figols,3,Alfieri,0,2 - 0,2,0,1.0,Figols,False
+Jornada 4 Liga Pauper 2025,3,6,Roberto,0,Aitor,0,0 - 2,0,2,2.0,Aitor,False
+Jornada 4 Liga Pauper 2025,4,1,Llark,9,Davd M,6,2 - 1,2,1,1.0,Llark,False
+Jornada 4 Liga Pauper 2025,4,2,Jaron,6,David B,6,2 - 0,2,0,1.0,Jaron,False
+Jornada 4 Liga Pauper 2025,4,3,Alan,6,Ruben,6,0 - 2,0,2,2.0,Ruben,False
+Jornada 4 Liga Pauper 2025,4,4,Figols,6,Hugo,3,2 - 0,2,0,1.0,Figols,False
+Jornada 4 Liga Pauper 2025,4,5,Teba,3,Aitor,3,2 - 0,2,0,1.0,Teba,False
+Jornada 4 Liga Pauper 2025,4,6,Roberto,0,Alfieri,0,2 - 0,2,0,1.0,Roberto,False
+Gran Pauper Festes del Crist 2025,1,1,Oscar Rubio,0,Maket,0,2 - 0,2,0,1.0,Oscar Rubio,False
+Gran Pauper Festes del Crist 2025,1,2,Guillermo F,0,Borja Martinez,0,0 - 2,0,2,2.0,Borja Martinez,False
+Gran Pauper Festes del Crist 2025,1,3,Dani B,0,Juanki,0,2 - 1,2,1,1.0,Dani B,False
+Gran Pauper Festes del Crist 2025,1,4,David Mateu,0,Angel,0,1 - 2,1,2,2.0,Angel,False
+Gran Pauper Festes del Crist 2025,1,5,Jaime,0,Adrian,0,0 - 2,0,2,2.0,Adrian,False
+Gran Pauper Festes del Crist 2025,1,6,Miquel,0,Saul C,0,2 - 0,2,0,1.0,Miquel,False
+Gran Pauper Festes del Crist 2025,1,7,Ruben R,0,Eric Andreu,0,2 - 1,2,1,1.0,Ruben R,False
+Gran Pauper Festes del Crist 2025,1,8,Jaron,0,PAT,0,1 - 2,1,2,2.0,PAT,False
+Gran Pauper Festes del Crist 2025,1,9,Joan Pablo,0,Alan,0,0 - 2,0,2,2.0,Alan,False
+Gran Pauper Festes del Crist 2025,1,10,Ferran,0,Borja Saura,0,2 - 1,2,1,1.0,Ferran,False
+Gran Pauper Festes del Crist 2025,1,11,Nieto,0,Saul A.,0,2 - 0,2,0,1.0,Nieto,False
+Gran Pauper Festes del Crist 2025,1,12,Alberto A,0,Hugo,0,1 - 2,1,2,2.0,Hugo,False
+Gran Pauper Festes del Crist 2025,1,13,Aitor,0,Ruben Garcia,0,0 - 2,0,2,2.0,Ruben Garcia,False
+Gran Pauper Festes del Crist 2025,1,14,Nilo,0,Iñigo,0,2 - 0,2,0,1.0,Nilo,False
+Gran Pauper Festes del Crist 2025,1,15,Sergio,0,Teba,0,2 - 1,2,1,1.0,Sergio,False
+Gran Pauper Festes del Crist 2025,1,16,David Fig.,0,Ruben Ma,0,0 - 1,0,1,2.0,Ruben Ma,False
+Gran Pauper Festes del Crist 2025,2,1,Sergio,3,Adrian,3,2 - 0,2,0,1.0,Sergio,False
+Gran Pauper Festes del Crist 2025,2,2,Nilo,3,PAT,3,1 - 2,1,2,2.0,PAT,False
+Gran Pauper Festes del Crist 2025,2,3,Miquel,3,Ruben Garcia,3,0 - 2,0,2,2.0,Ruben Garcia,False
+Gran Pauper Festes del Crist 2025,2,4,Ruben Ma,3,Borja Martinez,3,2 - 1,2,1,1.0,Ruben Ma,False
+Gran Pauper Festes del Crist 2025,2,5,Oscar Rubio,3,Hugo,3,1 - 2,1,2,2.0,Hugo,False
+Gran Pauper Festes del Crist 2025,2,6,Dani B,3,Ruben R,3,2 - 0,2,0,1.0,Dani B,False
+Gran Pauper Festes del Crist 2025,2,7,Ferran,3,Angel,3,1 - 2,1,2,2.0,Angel,False
+Gran Pauper Festes del Crist 2025,2,8,Nieto,3,Alan,3,2 - 0,2,0,1.0,Nieto,False
+Gran Pauper Festes del Crist 2025,2,9,Juanki,0,David Mateu,0,2 - 0,2,0,1.0,Juanki,False
+Gran Pauper Festes del Crist 2025,2,10,Eric Andreu,0,Saul A.,0,1 - 2,1,2,2.0,Saul A.,False
+Gran Pauper Festes del Crist 2025,2,11,Aitor,0,Saul C,0,2 - 1,2,1,1.0,Aitor,False
+Gran Pauper Festes del Crist 2025,2,12,David Fig.,0,Maket,0,2 - 0,2,0,1.0,David Fig.,False
+Gran Pauper Festes del Crist 2025,2,13,Guillermo F,0,Borja Saura,0,0 - 2,0,2,2.0,Borja Saura,False
+Gran Pauper Festes del Crist 2025,2,14,Jaime,0,Alberto A,0,0 - 2,0,2,2.0,Alberto A,False
+Gran Pauper Festes del Crist 2025,2,15,Joan Pablo,0,Teba,0,1 - 2,1,2,2.0,Teba,False
+Gran Pauper Festes del Crist 2025,3,1,Sergio,6,Angel,6,2 - 0,2,0,1.0,Sergio,False
+Gran Pauper Festes del Crist 2025,3,2,Nieto,6,Ruben Ma,6,0 - 2,0,2,2.0,Ruben Ma,False
+Gran Pauper Festes del Crist 2025,3,3,Hugo,6,PAT,6,2 - 1,2,1,1.0,Hugo,False
+Gran Pauper Festes del Crist 2025,3,4,Ruben Garcia,6,Dani B,6,1 - 2,1,2,2.0,Dani B,False
+Gran Pauper Festes del Crist 2025,3,5,Adrian,3,David Fig.,3,2 - 0,2,0,1.0,Adrian,False
+Gran Pauper Festes del Crist 2025,3,6,Jaron,3,Ruben R,3,0 - 2,0,2,2.0,Ruben R,False
+Gran Pauper Festes del Crist 2025,3,7,Ferran,3,Saul A.,3,0 - 2,0,2,2.0,Saul A.,False
+Gran Pauper Festes del Crist 2025,3,8,Borja Martinez,3,Alberto A,3,1 - 2,1,2,2.0,Alberto A,False
+Gran Pauper Festes del Crist 2025,3,9,Aitor,3,Teba,3,2 - 0,2,0,1.0,Aitor,False
+Gran Pauper Festes del Crist 2025,3,10,Oscar Rubio,3,Nilo,3,0 - 2,0,2,2.0,Nilo,False
+Gran Pauper Festes del Crist 2025,3,11,Alan,3,Miquel,3,2 - 1,2,1,1.0,Alan,False
+Gran Pauper Festes del Crist 2025,3,12,Borja Saura,3,Juanki,3,2 - 0,2,0,1.0,Borja Saura,False
+Gran Pauper Festes del Crist 2025,3,13,Saul C,0,Maket,0,1 - 2,1,2,2.0,Maket,False
+Gran Pauper Festes del Crist 2025,3,14,Iñigo,0,Guillermo F,0,0 - 2,0,2,2.0,Guillermo F,False
+Gran Pauper Festes del Crist 2025,3,15,David Mateu,0,Eric Andreu,0,1 - 2,1,2,2.0,Eric Andreu,False
+Gran Pauper Festes del Crist 2025,3,16,Jaime,0,Joan Pablo,0,1 - 2,1,2,2.0,Joan Pablo,False
+Gran Pauper Festes del Crist 2025,4,1,Sergio,9,Ruben Ma,9,0 - 2,0,2,2.0,Ruben Ma,False
+Gran Pauper Festes del Crist 2025,4,2,Hugo,9,Dani B,9,1 - 2,1,2,2.0,Dani B,False
+Gran Pauper Festes del Crist 2025,4,3,Nilo,6,Alan,6,2 - 0,2,0,1.0,Nilo,False
+Gran Pauper Festes del Crist 2025,4,4,PAT,6,Adrian,6,1 - 2,1,2,2.0,Adrian,False
+Gran Pauper Festes del Crist 2025,4,5,Nieto,6,Ruben Garcia,6,2 - 1,2,1,1.0,Nieto,False
+Gran Pauper Festes del Crist 2025,4,6,Saul A.,6,Angel,6,1 - 2,1,2,2.0,Angel,False
+Gran Pauper Festes del Crist 2025,4,7,Aitor,6,Borja Saura,6,0 - 2,0,2,2.0,Borja Saura,False
+Gran Pauper Festes del Crist 2025,4,8,Ruben R,6,Alberto A,6,2 - 0,2,0,1.0,Ruben R,False
+Gran Pauper Festes del Crist 2025,4,9,Maket,3,Teba,3,0 - 2,0,2,2.0,Teba,False
+Gran Pauper Festes del Crist 2025,4,10,Eric Andreu,3,Guillermo F,3,2 - 0,2,0,1.0,Eric Andreu,False
+Gran Pauper Festes del Crist 2025,4,11,Borja Martinez,3,Jaron,3,2 - 1,2,1,1.0,Borja Martinez,False
+Gran Pauper Festes del Crist 2025,4,12,David Fig.,3,Oscar Rubio,3,1 - 1,1,1,,,True
+Gran Pauper Festes del Crist 2025,4,13,Juanki,3,Joan Pablo,3,2 - 1,2,1,1.0,Juanki,False
+Gran Pauper Festes del Crist 2025,4,14,Ferran,3,Miquel,3,2 - 0,2,0,1.0,Ferran,False
+Gran Pauper Festes del Crist 2025,4,15,Iñigo,0,David Mateu,0,1 - 2,1,2,2.0,David Mateu,False
+Gran Pauper Festes del Crist 2025,4,16,Saul C,0,Jaime,0,1 - 2,1,2,2.0,Jaime,False
+Gran Pauper Festes del Crist 2025,5,1,Dani B,12,Ruben Ma,12,1 - 1,1,1,,,True
+Gran Pauper Festes del Crist 2025,5,2,Sergio,9,Nieto,9,1 - 2,1,2,2.0,Nieto,False
+Gran Pauper Festes del Crist 2025,5,3,Ruben R,9,Hugo,9,0 - 2,0,2,2.0,Hugo,False
+Gran Pauper Festes del Crist 2025,5,4,Angel,9,Adrian,9,0 - 2,0,2,2.0,Adrian,False
+Gran Pauper Festes del Crist 2025,5,5,Borja Saura,9,Nilo,9,2 - 0,2,0,1.0,Borja Saura,False
+Gran Pauper Festes del Crist 2025,5,6,Ruben Garcia,6,PAT,6,0 - 2,0,2,2.0,PAT,False
+Gran Pauper Festes del Crist 2025,5,7,Saul A.,6,Juanki,6,2 - 0,2,0,1.0,Saul A.,False
+Gran Pauper Festes del Crist 2025,5,8,Ferran,6,Alberto A,6,2 - 0,2,0,1.0,Ferran,False
+Gran Pauper Festes del Crist 2025,5,9,Borja Martinez,6,Alan,6,2 - 0,2,0,1.0,Borja Martinez,False
+Gran Pauper Festes del Crist 2025,5,10,Aitor,6,Eric Andreu,6,2 - 1,2,1,1.0,Aitor,False
+Gran Pauper Festes del Crist 2025,5,11,Teba,6,David Fig.,4,1 - 1,1,1,,,True
+Gran Pauper Festes del Crist 2025,5,12,Oscar Rubio,4,Jaron,3,2 - 0,2,0,1.0,Oscar Rubio,False
+Gran Pauper Festes del Crist 2025,5,13,David Mateu,3,Guillermo F,3,2 - 0,2,0,1.0,David Mateu,False
+Gran Pauper Festes del Crist 2025,5,14,Jaime,3,Miquel,3,0 - 2,0,2,2.0,Miquel,False
+Gran Pauper Festes del Crist 2025,5,15,Joan Pablo,3,Maket,3,2 - 1,2,1,1.0,Joan Pablo,False
+Gran Pauper Festes del Crist 2025,5,16,Iñigo,0,Saul C,0,1 - 2,1,2,2.0,Saul C,False
+Pauper Navideño 2025,1,1,Sergio R.,0,Rubén A.,0,2 - 0,2,0,1.0,Sergio R.,False
+Pauper Navideño 2025,1,2,Roberto,0,Hugo,0,2 - 0,2,0,1.0,Roberto,False
+Pauper Navideño 2025,1,3,Sergio,0,Joan Pablo,0,0 - 2,0,2,2.0,Joan Pablo,False
+Pauper Navideño 2025,1,4,Ferran R.,0,Vivorilla,0,0 - 2,0,2,2.0,Vivorilla,False
+Pauper Navideño 2025,1,5,Poxolo,0,Mar,0,2 - 1,2,1,1.0,Poxolo,False
+Pauper Navideño 2025,1,6,David Alf.,0,Dani B.,0,0 - 2,0,2,2.0,Dani B.,False
+Pauper Navideño 2025,1,7,Saul A.,0,Bargues,0,1 - 2,1,2,2.0,Bargues,False
+Pauper Navideño 2025,1,8,Nilo,0,Dani G.,0,2 - 1,2,1,1.0,Nilo,False
+Pauper Navideño 2025,1,9,Pau S.,0,Raúl R.,0,2 - 1,2,1,1.0,Pau S.,False
+Pauper Navideño 2025,1,10,Rubén M.,0,Fran,0,2 - 0,2,0,1.0,Rubén M.,False
+Pauper Navideño 2025,1,11,Mallol,0,Jose VR,0,1 - 1,1,1,,,True
+Pauper Navideño 2025,2,1,Joan Pablo,3,Bargues,3,0 - 2,0,2,2.0,Bargues,False
+Pauper Navideño 2025,2,2,Rubén M.,3,Dani B.,3,1 - 2,1,2,2.0,Dani B.,False
+Pauper Navideño 2025,2,3,Vivorilla,3,Roberto,3,1 - 2,1,2,2.0,Roberto,False
+Pauper Navideño 2025,2,4,Nilo,3,Poxolo,3,2 - 1,2,1,1.0,Nilo,False
+Pauper Navideño 2025,2,5,Pau S.,3,Sergio R.,3,1 - 2,1,2,2.0,Sergio R.,False
+Pauper Navideño 2025,2,6,Jose VR,1,Rubén A.,0,2 - 0,2,0,1.0,Jose VR,False
+Pauper Navideño 2025,2,7,Mallol,1,Fran,0,2 - 1,2,1,1.0,Mallol,False
+Pauper Navideño 2025,2,8,Mar,0,Ferran R.,0,1 - 2,1,2,2.0,Ferran R.,False
+Pauper Navideño 2025,2,9,Dani G.,0,Saul A.,0,0 - 2,0,2,2.0,Saul A.,False
+Pauper Navideño 2025,2,10,Sergio,0,Hugo,0,1 - 1,1,1,,,True
+Pauper Navideño 2025,2,11,David Alf.,0,Raúl R.,0,0 - 2,0,2,2.0,Raúl R.,False
+Pauper Navideño 2025,3,1,Dani B.,6,Sergio R.,6,1 - 2,1,2,2.0,Sergio R.,False
+Pauper Navideño 2025,3,2,Bargues,6,Nilo,6,2 - 1,2,1,1.0,Bargues,False
+Pauper Navideño 2025,3,3,Roberto,6,Jose VR,4,0 - 2,0,2,2.0,Jose VR,False
+Pauper Navideño 2025,3,4,Mallol,4,Ferran R.,3,2 - 0,2,0,1.0,Mallol,False
+Pauper Navideño 2025,3,5,Saul A.,3,Pau S.,3,2 - 1,2,1,1.0,Saul A.,False
+Pauper Navideño 2025,3,6,Vivorilla,3,Poxolo,3,2 - 0,2,0,1.0,Vivorilla,False
+Pauper Navideño 2025,3,7,Rubén M.,3,Raúl R.,3,2 - 1,2,1,1.0,Rubén M.,False
+Pauper Navideño 2025,3,8,Joan Pablo,3,Hugo,1,1 - 2,1,2,2.0,Hugo,False
+Pauper Navideño 2025,3,9,Sergio,1,Fran,0,1 - 2,1,2,2.0,Fran,False
+Pauper Navideño 2025,3,10,David Alf.,0,Mar,0,2 - 1,2,1,1.0,David Alf.,False
+Pauper Navideño 2025,3,11,Dani G.,0,Rubén A.,0,2 - 0,2,0,1.0,Dani G.,False
+Pauper Navideño 2025,4,1,Sergio R.,9,Bargues,9,0 - 2,0,2,2.0,Bargues,False
+Pauper Navideño 2025,4,2,Mallol,7,Rubén M.,6,2 - 1,2,1,1.0,Mallol,False
+Pauper Navideño 2025,4,3,Jose VR,7,Nilo,6,2 - 1,2,1,1.0,Jose VR,False
+Pauper Navideño 2025,4,4,Saul A.,6,Dani B.,6,2 - 1,2,1,1.0,Saul A.,False
+Pauper Navideño 2025,4,5,Vivorilla,6,Hugo,4,0 - 2,0,2,2.0,Hugo,False
+Pauper Navideño 2025,4,6,Dani G.,3,Pau S.,3,2 - 0,2,0,1.0,Dani G.,False
+Pauper Navideño 2025,4,7,David Alf.,3,Ferran R.,3,2 - 0,2,0,1.0,David Alf.,False
+Pauper Navideño 2025,4,8,Poxolo,3,Raúl R.,3,2 - 1,2,1,1.0,Poxolo,False
+Pauper Navideño 2025,4,9,Joan Pablo,3,Fran,3,0 - 2,0,2,2.0,Fran,False
+Pauper Navideño 2025,4,10,Sergio,1,Rubén A.,0,1 - 0,1,0,1.0,Sergio,False
+Pauper Navideño 2025,4,11,Mar,0,BYE,0,2 - 0,2,0,1.0,Mar,False
+Pauper Navideño 2025,5,1,Bargues,12,Jose VR,10,1 - 2,1,2,2.0,Jose VR,False
+Pauper Navideño 2025,5,2,Mallol,10,Saul A.,9,0 - 2,0,2,2.0,Saul A.,False
+Pauper Navideño 2025,5,3,Sergio R.,9,Hugo,7,2 - 1,2,1,1.0,Sergio R.,False
+Pauper Navideño 2025,5,4,Nilo,6,Dani B.,6,2 - 0,2,0,1.0,Nilo,False
+Pauper Navideño 2025,5,5,Rubén M.,6,Vivorilla,6,2 - 0,2,0,1.0,Rubén M.,False
+Pauper Navideño 2025,5,6,Fran,6,Dani G.,6,2 - 1,2,1,1.0,Fran,False
+Pauper Navideño 2025,5,7,Poxolo,6,David Alf.,6,2 - 0,2,0,1.0,Poxolo,False
+Pauper Navideño 2025,5,8,Sergio,4,Pau S.,3,1 - 1,1,1,,,True
+Pauper Navideño 2025,5,9,Joan Pablo,3,Ferran R.,3,1 - 2,1,2,2.0,Ferran R.,False
+Pauper Navideño 2025,5,10,Raúl R.,3,Mar,3,2 - 0,2,0,1.0,Raúl R.,False
+Pauper Navideño 2025,5,11,Rubén A.,0,BYE,0,2 - 0,2,0,1.0,Rubén A.,False
+Gran Pauper Festes del Crist 2025,2,16,Jaron,0,Iñigo,0,2 - 0,2,0,1.0,Jaron,False
