@@ -85,7 +85,7 @@ export function PlayerTable({ standings, matches, tournaments }: Props) {
                       <td colSpan={columns.length}>
                         {p.entries.map((e) => (
                           <div className="entry" key={`${e.tournament_name}-${e.rank}`}>
-                            <span className="pill">{e.tournament_name.replace("Mensual ", "")}</span>
+                            <span className="pill">{e.tournament_name}</span>
                             #{e.rank} · {e.archetype ?? "sin arquetipo"} ({e.wins}-{e.losses}-{e.draws})
                             {e.list_view_url && (
                               <>

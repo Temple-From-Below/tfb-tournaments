@@ -115,7 +115,7 @@ export function ArchetypeMetaTable({ standings, matches, colorScale }: Props) {
                         <td colSpan={columns.length}>
                           {decks.map((d) => (
                             <div className="entry" key={`${d.tournament_name}-${d.rank}`}>
-                              <span className="pill">{d.tournament_name.replace("Mensual ", "")}</span>
+                              <span className="pill">{d.tournament_name}</span>
                               #{d.rank} · {d.canonical_player_name} ({d.wins}-{d.losses}-{d.draws})
                               {d.list_view_url && (
                                 <>

@@ -1,4 +1,5 @@
 import type { Tournament } from "../types";
+import { abbreviateTournamentName } from "../lib/tournamentNames";
 
 interface Props {
   tournaments: Tournament[];
@@ -27,9 +28,9 @@ export function Filters({ tournaments, selected, onChange }: Props) {
             type="button"
             className={`chip${selected.has(t.tournament_name) ? " active" : ""}`}
             onClick={() => toggle(t.tournament_name)}
-            title={t.date}
+            title={`${t.tournament_name} (${t.date})`}
           >
-            {t.tournament_name}
+            {abbreviateTournamentName(t.tournament_name)}
           </button>
         ))}
         <button
