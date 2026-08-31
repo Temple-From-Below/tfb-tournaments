@@ -61,7 +61,7 @@ export default function App() {
           <img src={logo} alt="" className="logo" />
           Temple From Below · Pauper
         </h1>
-        <span className="subtitle">Clasificaciones, metagame y listas de los torneos mensuales</span>
+        <span className="subtitle">Metagame, emparejamientos, estadísticas y listas de los torneos de Pauper de Temple From Below</span>
       </header>
       <TournamentLinks tournaments={state.data.tournaments} />
 
