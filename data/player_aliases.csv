@@ -3,16 +3,19 @@ Adrian,Adrian,ok,
 AITOR,Aitor,confirmado,"Mismo handle mtgdecks 'aitor marti(rubio)' que 'Aitor'"
 Aitor,Aitor,ok,
 Alan,Alan,ok,
+Alejandro Guinot,Alejandro Guinot,ok,"Jugador nuevo (torneos 2026) - handle mtgdecks 'guinotix'"
 alejandro reguera,Alejandro Reguera,confirmado,"Confirmado por el usuario - mismo que 'Alex' en Julio 2026"
 Alberto A,Alberto Alcolea,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'alberto alcolea'"
 Alex,Alejandro Reguera,confirmado,"Confirmado por el usuario - mismo que 'alejandro reguera' en Junio 2026"
 Alfieri,Alfieri,ok,
+Ana,Ana,ok,"Jugador nuevo (torneos 2026) - handle mtgdecks 'ana pacheco catalán'"
 Angel,Ángel,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'Ángel'"
 ARTERO,Artero,confirmado,"Mismo handle mtgdecks 'artero' que 'Artero'"
 Artero,Artero,ok,
 Bargues,Bargues,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'alex bargues'; distinto de 'Alex'=Alejandro Reguera"
 BORJA,Borja Saura,confirmado,"Handle mtgdecks 'borja saura' - jugador distinto del 'Borja' existente (=Borja Martinez)"
 Borja,Borja Martinez,confirmado,"Handle mtgdecks 'borja martinez'. OJO: existe otro 'Borja' distinto (Borja Saura) en los torneos 2025 - se ha renombrado esa fila concreta a 'Borja Saura' en standings/pairings para no confundirlos"
+Borja M,Borja Martinez,confirmado,"Mismo handle mtgdecks 'borja martínez' que 'Borja Martinez'/'Borja'"
 Borja Martinez,Borja Martinez,ok,"Mismo handle 'borja martinez' que el 'Borja' de los torneos 2026"
 Borja Saura,Borja Saura,ok,"Jugador nuevo (torneos 2025), fila renombrada desde 'Borja' en Gran Pauper Festes del Crist 2025 para no confundir con Borja Martinez"
 Chema,Chema,ok,
@@ -31,9 +34,11 @@ David F,David F,confirmado,"Confirmado por el usuario - mismo que 'Figols' y 'Fi
 David Fig.,David F,confirmado,"Handle mtgdecks 'david figols' - extiende el cluster confirmado David F/Figols/Figols no"
 DAVID FIG.,David F,confirmado,"Handle mtgdecks 'david f.' - extiende el cluster confirmado David F/Figols/Figols no"
 Davd M,David Mateu,confirmado,"Erratra de 'David M'; mismo handle mtgdecks 'david mateu' que 'David Mateu'"
+David M,David Mateu,confirmado,"Mismo handle mtgdecks 'david mateu' que 'David Mateu'/'Davd M'"
 David Mateu,David Mateu,ok,"Jugador nuevo (torneos 2025)"
 DAVID P.,David Pallarés,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'david pallares', distinto de David Beltran/David F/David Mateu"
 Eric Andreu,Eric Andreu,ok,"Jugador nuevo (torneos 2025)"
+Eric R,Eric R,ok,"Jugador nuevo (torneos 2026) - handle mtgdecks 'ericrm_'. Persona DISTINTA de 'Eric Andreu' (handle 'eric andreu')"
 Euge,Euge,ok,
 Ferran,Ferran Ruiz,confirmado,"Confirmado por el usuario - mismo que 'Ruiz'"
 FERRAN,Ferran Ruiz,confirmado,"Mismo handle mtgdecks 'ferran' que 'Ferran'"
@@ -43,6 +48,7 @@ Figols,David F,confirmado,"Confirmado por el usuario - mismo que 'David F' y 'Fi
 Figols no,David F,confirmado,"Confirmado por el usuario - mismo que 'David F' y 'Figols'"
 Fran,Fran,ok,"Jugador nuevo (torneos 2025)"
 Giacomo,Giacomo,ok,
+Gines,Gines,ok,"Jugador nuevo (torneos 2026) - handle mtgdecks 'gines asensio sanagustin'"
 Guillermo F,Guillermo F,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'will'"
 Hector,Hector,ok,
 HÉCTOR,Hector,confirmado,"Confirmado por el usuario - misma persona que 'Hector', pese a tener handles de mtgdecks distintos ('hagridtron' vs 'hector')"
@@ -58,17 +64,21 @@ Jose VR,Jose Vidal Ros,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'jose 
 Juanki,Juanki,ok,"Jugador nuevo (torneos 2025)"
 JuanMa,JuanMa,ok,
 JUAN N,Juan Novella,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'juan novella'"
+JuanVi,JuanVi,ok,"Jugador nuevo (torneos 2026) - handle mtgdecks 'jv'"
 Llark,Llark,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'llarkkk'"
 Maket,Maket,ok,"Jugador nuevo (torneos 2025)"
 MAKET,Maket,confirmado,"Mismo handle mtgdecks 'maket'"
 Mallol,Mallol,ok,"Jugador nuevo (torneos 2025)"
 Mar,Mar,ok,"Jugador nuevo (torneos 2025)"
 MARC,Marc Gargallo,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'marc gargallo'"
+Miguel Garcia,Miguel Garcia,ok,"Jugador nuevo (torneos 2026) - handle mtgdecks 'miguel tabanardo'"
 Miquel,Miquel,ok,
 Nieto,Nieto,confirmado,"Confirmado por el usuario - misma persona en Gran Pauper Festes del Crist 2025 (handle mtgdecks 'nieteitor') y en el resto de torneos (handle 'victor nieto delgado')"
 NIETO,Nieto,confirmado,"Mismo handle mtgdecks 'victor nieto delgado' que 'Nieto'"
 Nilo,Nilo,revisar,"El 'Nilo' de los torneos 2025 (Festes/Navideño) tiene handle mtgdecks 'muñe', distinto del handle 'nilo' de los torneos 2026 - se mantiene unificado por defecto (mismo nombre en AetherHub, y ya hay precedente de jugadores con handles muy distintos como Poxo/Poxolo o David F/Figols) pero no hay certeza; revisar con el usuario"
+Oscar,Oscar Rubio,confirmado,"Confirmado por el usuario - misma persona que 'Oscar Rubio', pese a que el handle mtgdecks de esta fila ('óscar', torneos 2026) no coincide exactamente con 'oscar rubio'"
 Oscar Rubio,Oscar Rubio,ok,"Jugador nuevo (torneos 2025)"
+Pablo,Joan Pablo,confirmado,"Mismo handle mtgdecks 'joan pablo' que 'Joan Pablo'"
 Paco,Paco,ok,
 Pat,Pat,ok,
 PAT,Pat,confirmado,"Mismo handle mtgdecks 'pat urbano' que 'Pat'"
@@ -81,9 +91,11 @@ Raúl R.,Raúl Rubio,ok,"Jugador nuevo (torneos 2025)"
 Roberto,Roberto Llopis,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'roberto llopis'"
 ROBERTO,Roberto Llopis,confirmado,"Mismo handle mtgdecks 'roberto llopis' que 'Roberto'"
 ROCA,Alan,confirmado,"Mismo handle mtgdecks 'alan roca ebri' que 'Alan'"
+Roger,Roger,ok,"Jugador nuevo (torneos 2026) - handle mtgdecks 'roger diago'"
 Ruben,Ruben Ma,confirmado,"Handle mtgdecks 'rubenma' - mismo cluster que 'Ruben I', 'RUBEN MA.', 'Ruben Ma', 'RUBÉN A.', 'Rubén A.'. Resuelve la duda anterior (media) entre 'Ruben' y 'Ruben I'"
 Ruben Garcia,Vivorilla,confirmado,"Confirmado por el usuario - misma persona que 'Vivorilla'. Handle mtgdecks 'ruben garcia mazon'. Persona DISTINTA de 'Ruben Ma' (aparecen como jugadores distintos en el mismo torneo Festes del Crist 2025)"
 Ruben I,Ruben Ma,confirmado,"Handle mtgdecks 'rubenma' - mismo cluster que 'Ruben', 'RUBEN MA.', 'Ruben Ma', 'RUBÉN A.', 'Rubén A.'. Resuelve la duda anterior (media) entre 'Ruben' y 'Ruben I'"
+Ruben M.,Ruben Ma,confirmado,"Handle mtgdecks 'rubenma' (Gran Pauper Festes del Crist 2026) - mismo cluster que 'Ruben'/'Ruben Ma'/etc. OJO: distinto de la fila 'Rubén M.' (con tilde, marcada 'revisar' - handle ligeramente distinto 'rubén m'); esta evidencia nueva sugiere que también podría ser la misma persona, revisar con el usuario"
 Ruben Ma,Ruben Ma,ok,"Handle mtgdecks 'rubenma'"
 RUBEN MA.,Ruben Ma,confirmado,"Handle mtgdecks 'rubenma'"
 Ruben R,Ruben Redon,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'rubén redon'. Persona DISTINTA de 'Ruben Ma' y 'Ruben Garcia' (aparecen como jugadores distintos en el mismo torneo Festes del Crist 2025)"
@@ -93,6 +105,7 @@ Rubén M.,Rubén M.,revisar,"Handle mtgdecks 'rubén m' - PARECIDO pero no ident
 Ruiz,Ferran Ruiz,confirmado,"Confirmado por el usuario - mismo que 'Ferran'"
 Saul A.,Saul A.,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'saul a'"
 Saul C,Saúl C.,ok,"Jugador nuevo (torneos 2025) - handle mtgdecks 'saúl c'. Persona DISTINTA de 'Saul A.'"
+Sebastian G.,Sebastian G.,ok,"Jugador nuevo (torneos 2026) - handle mtgdecks 'sebastian'"
 Sergio,Sergio,ok,"Distinto de 'SERGIO RUBIO'/'Sergio R.' (=Sergio Rubio Huertas, apellido distinto)"
 SERGIO,Sergio,confirmado,"Mismo handle mtgdecks 'sergio sanchez' que 'Sergio'"
 Sergio R.,Sergio Rubio Huertas,confirmado,"Mismo handle mtgdecks 'sergio rubio huertas' que 'SERGIO RUBIO'. Persona DISTINTA de 'Sergio' (apellido distinto)"
