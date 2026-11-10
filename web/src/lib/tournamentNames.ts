@@ -4,6 +4,7 @@ const ABBREVIATIONS: [RegExp, string][] = [
   [/Pauper Navideño/g, "Navideño"],
   [/Pauper Tribals/g, "PTribals"],
   [/Jornada /g, "J"],
+  [/^Final /g, "F "],
   [/Liga Pauper/g, "LP"],
   [/Gran Pauper/g, "GP"],
   [/Festes del Crist/g, "FdC"],
