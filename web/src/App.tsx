@@ -10,6 +10,7 @@ import { MatchupMatrix } from "./components/MatchupMatrix";
 import { PlayerTable } from "./components/PlayerTable";
 import { CardTable } from "./components/CardTable";
 import { TournamentLinks } from "./components/TournamentLinks";
+import { isSelectedByDefault } from "./lib/tournamentNames";
 
 export default function App() {
   const state = useData();
@@ -17,7 +18,9 @@ export default function App() {
 
   useEffect(() => {
     if (state.status === "ready" && selectedTournaments.size === 0) {
-      setSelectedTournaments(new Set(state.data.tournaments.map((t) => t.tournament_name)));
+      setSelectedTournaments(
+        new Set(state.data.tournaments.map((t) => t.tournament_name).filter(isSelectedByDefault)),
+      );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.status]);
